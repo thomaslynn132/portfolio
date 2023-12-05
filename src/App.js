@@ -11,8 +11,8 @@ function App() {
             <div className="portfolio-container">
               <p>I am</p>
               <h1 className="myName">Thomas Lynn</h1>
-              <a href="  ">
-                <p>You can download my personal resume here.</p>
+              <a href="https://drive.google.com/file/d/1bqQiV4_MuKB99Sm7FewWT2Pi_udwOYPe/view?usp=drive_link">
+                <p>You can download my personal resume by clicking here.</p>
               </a>
             </div>
           </div>
