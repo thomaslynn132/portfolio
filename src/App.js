@@ -9,7 +9,7 @@ function App() {
         <div className="forBgImg">
           <div className="App-header">
             <div className="portfolio-container">
-              <p>I am</p>
+              <p id="Iam">I am</p>
               <h1 className="myName">Thomas Lynn</h1>
               <a href="https://drive.google.com/file/d/1bqQiV4_MuKB99Sm7FewWT2Pi_udwOYPe/view?usp=drive_link">
                 <p>You can download my personal resume by clicking here.</p>
@@ -21,7 +21,8 @@ function App() {
               <h2>About Me</h2>
               <p>
                 Hello! I'm a passionate web developer with expertise in
-                React.js, JavaScript, and learning a lot more.
+                React.js, JavaScript, and now I'm learning tailwind.css,
+                typescript and angularjs.
               </p>
             </div>
           </section>
