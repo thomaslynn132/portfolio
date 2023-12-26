@@ -1,9 +1,30 @@
 /* src/App.css */
-body {
+* {
+  overflow-x: hidden;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  z-index: -4;
+}
+.section {
+  background-color: #000;
+  background-size: cover;
+  width: 100%;
+  box-shadow: #000;
+  height: 500px;
+  display: block;
+  box-sizing: border-box;
+  box-shadow: #000;
+  background-color: #000;
+}
+
+.App {
+  height: 1200px;
+  width: 100vw;
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 #Iam {
   color: white;
   size: 25px;
@@ -14,22 +35,14 @@ body {
   font-display: initial;
   color: blue;
 }
-/* 
-.clock {
-  background-color: aliceblue;
-  width: 20%;
-  height: 20%;
-} */
 
 .App-header {
-  position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-image: url("Background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 .ImgHolder {
@@ -57,29 +70,15 @@ p {
   font-size: 1.5rem;
 }
 
-.about-section,
-.projects-section,
-.skills-section,
-.contact-section {
-  padding: 40px 0;
+.about,
+.projects,
+.skills,
+.contact {
+  padding: 40px;
 }
 
 h2 {
-  color: #333;
-}
-
-.projects-section ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-}
-
-.projects-section li {
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 10px;
-  max-width: 300px;
+  color: cyan;
 }
 
 .contact-section p {
@@ -116,7 +115,7 @@ h2 {
 }
 
 .contentText {
-  color: black;
+  color: rgb(255, 255, 255);
   font: 100;
   font-display: initial;
   text-align: center;
@@ -126,23 +125,50 @@ h2 {
 
 #englishGrammar {
   margin-left: 0px;
-  background-image: url("./englishGrammar.png");
   background-size: cover;
   background-position: left;
 }
 
 #homePage {
-  background-image: url("./HomePage.png");
   background-size: cover;
   background-position: center;
 }
 
 .projectsContainer {
   /* border-right: ; */
-  height: 450px;
-  width: 100vw;
-  position: relative;
   display: flex;
-  flex-direction: row;
-  align-items: left;
+}
+
+@media (min-width: 767px) {
+  .project {
+    height: 500;
+    width: 200;
+    padding: 15px;
+    margin: 15px;
+    background-color: #000;
+  }
+}
+
+@media (max-width: 766px) {
+  .project {
+    font-size: small;
+    height: 400px;
+    width: 300px;
+    padding: 15px;
+    margin: 15px;
+    background-color: #000;
+    border: aqua 5px solid;
+  }
+
+  .projectImage {
+    height: 200px;
+    width: 300px;
+  }
+
+  .lineBreak {
+    height: 2px;
+    width: auto;
+    margin: 15px;
+    background-color: #000;
+  }
 }
