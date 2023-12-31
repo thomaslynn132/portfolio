@@ -8,20 +8,21 @@ function App() {
   return (
     <>
       <div className="App">
-        <div className="forBgImg">
-          <div
-            className="App-header"
-            style={{ backgroundImage: `url(${Background})` }}>
-            <div className="portfolio-container">
-              <p className="myName" id="Iam">
-                I am
-              </p>
-              <h1 className="myName">Thomas Lynn</h1>
-              <a href="https://drive.google.com/file/d/1bqQiV4_MuKB99Sm7FewWT2Pi_udwOYPe/view?usp=drive_link">
-                <p>You can download my personal resume by clicking here.</p>
-              </a>
-            </div>
+        <div
+          className="App-header"
+          style={{ backgroundImage: `url(${Background})` }}>
+          <div className="portfolio-container">
+            <p className="myName" id="Iam">
+              I am
+            </p>
+            <h1 className="myName">Thomas Lynn</h1>
+            <a href="https://drive.google.com/file/d/1bqQiV4_MuKB99Sm7FewWT2Pi_udwOYPe/view?usp=drive_link">
+              <p>You can download my personal resume by clicking here.</p>
+            </a>
           </div>
+        </div>
+
+        <div className="forBgImg">
           <section className="about-section">
             <div className="portfolio-container">
               <h2>About Me</h2>

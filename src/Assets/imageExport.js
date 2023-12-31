@@ -15,7 +15,11 @@ import Telegram from "./Telegram.png";
 import Upperbody from "./UpperBody.jpg";
 import myPhoto from "./myPhoto.jpg";
 import T from "./T.png";
+import alyMyanmar from "./ALY-Myanmar.png";
+import ToDoList from "./ToDoList.png";
 export {
+  alyMyanmar,
+  ToDoList,
   T,
   myPhoto,
   Background,

@@ -1,6 +1,5 @@
 /* src/App.css */
 * {
-  overflow-x: hidden;
   color: rgb(0, 0, 0);
   text-align: center;
   z-index: -4;
@@ -12,16 +11,25 @@
   box-shadow: #000;
   height: 500px;
   display: block;
-  box-sizing: border-box;
+
   box-shadow: #000;
   background-color: #000;
 }
 
+.projects {
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.forBgImg {
+  color: skyblue;
+}
 .App {
-  height: 1200px;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -134,37 +142,28 @@ h2 {
   background-position: center;
 }
 
-.projectsContainer {
-  /* border-right: ; */
-  display: flex;
+.project {
+  font-size: small;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 15px;
+  background-color: gray;
+  border: aqua 5px solid;
 }
 
 @media (min-width: 767px) {
-  .project {
-    height: 500;
-    width: 200;
-    padding: 15px;
+  .lineBreak {
+    height: auto;
+    width: 2px;
     margin: 15px;
     background-color: #000;
   }
 }
 
 @media (max-width: 766px) {
-  .project {
-    font-size: small;
-    height: 400px;
-    width: 300px;
-    padding: 15px;
-    margin: 15px;
-    background-color: #000;
-    border: aqua 5px solid;
+  * {
+    overflow: hidden;
   }
-
-  .projectImage {
-    height: 200px;
-    width: 300px;
-  }
-
   .lineBreak {
     height: 2px;
     width: auto;

@@ -1,5 +1,10 @@
 import React from "react";
-import { englishGrammar, homePage } from "../../Assets/imageExport";
+import {
+  englishGrammar,
+  homePage,
+  alyMyanmar,
+  ToDoList,
+} from "../../Assets/imageExport";
 export default function Projects() {
   const projects = [
     {
@@ -12,7 +17,19 @@ export default function Projects() {
       name: "Homepage design for freelancers.com contest",
       img: homePage,
       gitHub: "https://github.com/thomaslynn132/homepage-design",
-      liveDemo: "#",
+      liveDemo: null,
+    },
+    {
+      name: "A Linn Yaung Myanmar co.ltd",
+      img: alyMyanmar,
+      gitHub: null,
+      liveDemo: "https://aly-myanmar.vercel.app/",
+    },
+    {
+      name: "To Do List",
+      img: ToDoList,
+      gitHub: "https://github.com/thomaslynn132/todolistapp",
+      liveDemo: "https://delightful-donut-b6d2ea.netlify.app/",
     },
   ];
 
@@ -25,11 +42,25 @@ export default function Projects() {
               src={project.img}
               alt={project.name}
               className="projectImage"
+              height={200}
+              width={300}
             />
-            <h3 className="contentText">{project.name}</h3>
-            <a href={project.gitHub}>Check the code here</a> <br />
-            <a href={project.liveDemo}>View Live Demo Here</a>
-            <div className="lineBreak"></div>
+            <div className="contentText">
+              <h3>{project.name}</h3>
+              <a
+                href={project.gitHub}
+                target="_blank"
+                rel="noopener noreferrer">
+                Check the gitHub Repo here
+              </a>{" "}
+              <br />
+              <a
+                href={project.liveDemo}
+                target="_blank"
+                rel="noopener noreferrer">
+                View Live Demo Here
+              </a>
+            </div>
           </div>
         ))}
       </div>
