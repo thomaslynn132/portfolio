@@ -23,7 +23,8 @@ export default function Projects() {
       name: "A Linn Yaung Myanmar co.ltd",
       img: alyMyanmar,
       gitHub: null,
-      liveDemo: "https://aly-myanmar.vercel.app/",
+      liveDemo:
+        "https://aly-myanmar-6dv00e9w9-thomaslynn132s-projects.vercel.app/",
     },
     {
       name: "To Do List",
@@ -45,19 +46,14 @@ export default function Projects() {
               height={200}
               width={300}
             />
+
             <div className="contentText">
               <h3>{project.name}</h3>
-              <a
-                href={project.gitHub}
-                target="_blank"
-                rel="noopener noreferrer">
+              <a href={project.gitHub} key={index}>
                 Check the gitHub Repo here
-              </a>{" "}
+              </a>
               <br />
-              <a
-                href={project.liveDemo}
-                target="_blank"
-                rel="noopener noreferrer">
+              <a href={project.liveDemo} key={index}>
                 View Live Demo Here
               </a>
             </div>

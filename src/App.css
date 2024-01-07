@@ -3,17 +3,8 @@
   color: rgb(0, 0, 0);
   text-align: center;
   z-index: -4;
-}
-.section {
-  background-color: #000;
-  background-size: cover;
-  width: 100%;
-  box-shadow: #000;
-  height: 500px;
-  display: block;
-
-  box-shadow: #000;
-  background-color: #000;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects {
@@ -29,7 +20,6 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -148,7 +138,7 @@ h2 {
   padding: 5px;
   margin: 15px;
   background-color: gray;
-  border: aqua 5px solid;
+  border: rgb(0, 0, 0) 5px solid;
 }
 
 @media (min-width: 767px) {
@@ -161,9 +151,6 @@ h2 {
 }
 
 @media (max-width: 766px) {
-  * {
-    overflow: hidden;
-  }
   .lineBreak {
     height: 2px;
     width: auto;
