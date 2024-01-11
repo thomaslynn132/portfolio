@@ -16,7 +16,7 @@ function App() {
               I am
             </p>
             <h1 className="myName">Thomas Lynn</h1>
-            <a href="https://drive.google.com/file/d/1bqQiV4_MuKB99Sm7FewWT2Pi_udwOYPe/view?usp=drive_link">
+            <a href="https://drive.google.com/file/d/1oiRDlTUVEq-8dr0Z1jiOCDQXgNkykka2/view?usp=drive_link">
               <p>You can download my personal resume by clicking here.</p>
             </a>
           </div>

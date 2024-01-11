@@ -9,6 +9,7 @@
 
 .projects {
   display: flex;
+  justify-content: flex-start;
   overflow-x: scroll;
   white-space: nowrap;
 }
@@ -23,11 +24,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#Iam {
-  color: white;
-  size: 25px;
-  font-family: monospace;
-}
 .myName {
   font-family: "Courier New", Courier, monospace;
   font-display: initial;
@@ -41,6 +37,17 @@
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
+
+  p {
+    color: rgb(255, 0, 0);
+    size: 25px;
+    font-family: monospace;
+    font-weight: bolder;
+  }
+
+  h1 {
+    color: rgb(181, 187, 0);
+  }
 }
 
 .ImgHolder {
@@ -134,11 +141,15 @@ h2 {
 
 .project {
   font-size: small;
-  box-sizing: border-box;
-  padding: 5px;
+  width: 330px;
+  height: 320px;
+  padding: 15px;
   margin: 15px;
   background-color: gray;
-  border: rgb(0, 0, 0) 5px solid;
+  box-shadow: 10px 5px 0px 0px;
+  p {
+    justify-content: start;
+  }
 }
 
 @media (min-width: 767px) {

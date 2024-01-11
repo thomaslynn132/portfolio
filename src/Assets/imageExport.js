@@ -14,10 +14,12 @@ import react from "./react.png";
 import Telegram from "./Telegram.png";
 import Upperbody from "./UpperBody.jpg";
 import myPhoto from "./myPhoto.jpg";
-import T from "./T.png";
+import T from "./T.jpg";
 import alyMyanmar from "./ALY-Myanmar.png";
 import ToDoList from "./ToDoList.png";
+import Portfolio from "./Portfolio.png";
 export {
+  Portfolio,
   alyMyanmar,
   ToDoList,
   T,

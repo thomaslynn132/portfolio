@@ -4,7 +4,9 @@ import {
   homePage,
   alyMyanmar,
   ToDoList,
+  Portfolio,
 } from "../../Assets/imageExport";
+
 export default function Projects() {
   const projects = [
     {
@@ -32,30 +34,46 @@ export default function Projects() {
       gitHub: "https://github.com/thomaslynn132/todolistapp",
       liveDemo: "https://delightful-donut-b6d2ea.netlify.app/",
     },
+    {
+      name: "My Portfolio",
+      img: Portfolio,
+      gitHub: "https://github.com/thomaslynn132/portfolio",
+      liveDemo: null,
+    },
   ];
 
   return (
     <>
       <div className="projects">
-        {projects.map((project, index) => (
-          <div className="project" key={index}>
-            <img
-              src={project.img}
-              alt={project.name}
-              className="projectImage"
-              height={200}
-              width={300}
-            />
-
-            <div className="contentText">
+        {projects.map((project, Index) => (
+          <div className="project" key={Index}>
+            <a href={project.liveDemo} key={Index}>
+              <img
+                src={project.img}
+                alt={project.name}
+                className="projectImage"
+                height={200}
+                width={300}
+              />
+            </a>
+            <div className="contentText" key={Index}>
               <h3>{project.name}</h3>
-              <a href={project.gitHub} key={index}>
-                Check the gitHub Repo here
-              </a>
-              <br />
-              <a href={project.liveDemo} key={index}>
-                View Live Demo Here
-              </a>
+              {project.gitHub ? (
+                <>
+                  <a href={project.gitHub} key={Index}>
+                    Check the GitHub Repo here
+                  </a>
+                </>
+              ) : (
+                <p style={{ fontSize: "12px" }}>
+                  Sorry this repo can't be shared.
+                </p>
+              )}
+              {project.liveDemo && (
+                <a href={project.liveDemo} key={Index}>
+                  View Live Demo Here
+                </a>
+              )}
             </div>
           </div>
         ))}
