@@ -12,9 +12,7 @@ function App() {
           className="App-header"
           style={{ backgroundImage: `url(${Background})` }}>
           <div className="portfolio-container">
-            <p className="myName" id="Iam">
-              I am
-            </p>
+            <p>I am</p>
             <h1 className="myName">Thomas Lynn</h1>
             <a href="https://drive.google.com/file/d/1oiRDlTUVEq-8dr0Z1jiOCDQXgNkykka2/view?usp=drive_link">
               <p>You can download my personal resume by clicking here.</p>
@@ -28,7 +26,7 @@ function App() {
               <h2>About Me</h2>
               <About />
               <p>
-                Hello! I'm Thant Lynn Naingand a passionate web developer with
+                Hello! I'm Thant Lynn Naing and a passionate web developer with
                 expertise in React.js, JavaScript, and now I'm learning
                 tailwind.css, typescript and angularjs.
               </p>

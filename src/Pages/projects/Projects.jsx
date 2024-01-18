@@ -63,10 +63,12 @@ export default function Projects() {
                   <a href={project.gitHub} key={Index}>
                     Check the GitHub Repo here
                   </a>
+                  <br />
                 </>
               ) : (
                 <p style={{ fontSize: "12px" }}>
                   Sorry this repo can't be shared.
+                  <br />
                 </p>
               )}
               {project.liveDemo && (
