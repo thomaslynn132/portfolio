@@ -26,7 +26,7 @@ export default function Projects() {
       img: alyMyanmar,
       gitHub: null,
       liveDemo:
-        "https://aly-myanmar-6dv00e9w9-thomaslynn132s-projects.vercel.app/",
+        "https://aly-myanmar.vercel.app/",
     },
     {
       name: "To Do List",
