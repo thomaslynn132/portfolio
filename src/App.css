@@ -59,7 +59,11 @@
   position: flex;
   flex-direction: row;
 }
-
+.img:hover {
+  height: 60px;
+  width: 60px;
+  transition: 0.75s;
+}
 .img {
   margin: 10px;
 }
@@ -67,6 +71,12 @@
 .portfolio-container {
   max-width: 800px;
   margin: 0 auto;
+  position: sticky;
+  p:hover {
+    color: aqua;
+    transition: 1s;
+    -webkit-text-stroke: 1px #000;
+  }
 }
 
 h1 {
@@ -84,7 +94,10 @@ p {
   padding: 40px;
   overflow-x: hidden;
 }
-
+h2:hover {
+  color: rgb(0, 211, 211);
+  transition: 1s;
+}
 h2 {
   color: cyan;
   font-size: 45px;
@@ -132,7 +145,13 @@ h2 {
   margin-bottom: 5px;
   padding: 10px;
 }
-
+section {
+  background-color: rgba(161, 161, 161, 0.4);
+}
+section:hover {
+  background-color: rgba(194, 194, 194, 0.5);
+  transition: 1s;
+}
 #englishGrammar {
   margin-left: 0px;
   background-size: cover;
@@ -158,4 +177,10 @@ h2 {
     font-weight: bold;
     -webkit-text-stroke: 0.1px #ffffff;
   }
+}
+.project:hover {
+  background-color: rgba(0, 112, 126, 0.8);
+  color: red;
+  transition: 0.75s;
+  font-weight: bold;
 }

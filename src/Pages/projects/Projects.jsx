@@ -25,8 +25,7 @@ export default function Projects() {
       name: "A Linn Yaung Myanmar co.ltd",
       img: alyMyanmar,
       gitHub: null,
-      liveDemo:
-        "https://aly-myanmar-6dv00e9w9-thomaslynn132s-projects.vercel.app/",
+      liveDemo: "https://aly-myanmar.vercel.app/",
     },
     {
       name: "To Do List",
@@ -63,12 +62,10 @@ export default function Projects() {
                   <a href={project.gitHub} key={Index}>
                     Check the GitHub Repo here
                   </a>
-                  <br />
                 </>
               ) : (
                 <p style={{ fontSize: "12px" }}>
                   Sorry this repo can't be shared.
-                  <br />
                 </p>
               )}
               {project.liveDemo && (

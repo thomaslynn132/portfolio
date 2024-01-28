@@ -9,7 +9,7 @@ import homePage from "./HomePage.png";
 import html5 from "./html5.png";
 import Instagram from "./Instagram.png";
 import javascript from "./javascript.png";
-import Linkedin from "./Linkedin.jpeg";
+import Linkedin from "./Linkedin.png";
 import react from "./react.png";
 import Telegram from "./Telegram.png";
 import Upperbody from "./UpperBody.jpg";
@@ -18,7 +18,9 @@ import T from "./T.jpg";
 import alyMyanmar from "./ALY-Myanmar.png";
 import ToDoList from "./ToDoList.png";
 import Portfolio from "./Portfolio.png";
+import Logo from "./logo.png";
 export {
+  Logo,
   Portfolio,
   alyMyanmar,
   ToDoList,
