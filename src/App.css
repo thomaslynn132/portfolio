@@ -73,7 +73,7 @@
   margin: 0 auto;
   position: sticky;
   p:hover {
-    color: aqua;
+    color: rgb(0, 162, 255);
     transition: 1s;
     -webkit-text-stroke: 1px #000;
   }
