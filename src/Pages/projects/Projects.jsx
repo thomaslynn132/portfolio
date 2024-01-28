@@ -25,7 +25,8 @@ export default function Projects() {
       name: "A Linn Yaung Myanmar co.ltd",
       img: alyMyanmar,
       gitHub: null,
-      liveDemo: "https://aly-myanmar.vercel.app/",
+      liveDemo:
+        "https://aly-myanmar-6dv00e9w9-thomaslynn132s-projects.vercel.app/",
     },
     {
       name: "To Do List",
