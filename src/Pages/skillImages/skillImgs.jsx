@@ -4,6 +4,7 @@ import {
   javascript,
   Bootstrap,
   react,
+  GitHub,
 } from "../../Assets/imageExport";
 export default function SkillImgs() {
   const skillImgs = [
@@ -26,6 +27,10 @@ export default function SkillImgs() {
     {
       name: "React Js",
       src: react,
+    },
+    {
+      name: "GitHub",
+      src: GitHub,
     },
   ];
   return (

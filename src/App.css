@@ -184,3 +184,25 @@ section:hover {
   transition: 0.75s;
   font-weight: bold;
 }
+.Loading {
+  position: relative;
+}
+
+.loading-text {
+  position: absolute;
+  color: chartreuse;
+  -webkit-text-stroke: #000000 1px solid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the label */
+  animation: rotateAnimation 5s linear infinite; /* Continuous rotation with a duration of 5 seconds */
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
