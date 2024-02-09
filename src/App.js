@@ -1,62 +1,43 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import ContactImgs from "./Pages/Contact/Contact";
-import Projects from "./Pages/projects/Projects";
-import SkillImgs from "./Pages/skillImages/skillImgs";
-import About from "./Pages/About/About";
-import { Background } from "./Assets/imageExport";
 import Loading from "./Pages/Loading/Loading";
+import RouterConfig from "./Routing/RouterConfig";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulating an asynchronous operation (replace this with your actual async operation)
+    const fetchData = async () => {
+      try {
+        // Perform your asynchronous operation here
+        // For example, fetching data from an API
+        // const response = await fetch('your-api-endpoint');
+        // const data = await response.json();
+
+        // Simulating a delay for demonstration purposes
+        await new Promise((resolve) => setTimeout(resolve, 5000));
+
+        // Set loading to false when the operation is complete
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setLoading(false); // Handle errors and still set loading to false
+      }
+    };
+
+    // Call the fetchData function
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <Loading />; // Display a loading page
+  }
+
   return (
     <>
       <div className="App">
-        <Suspense fallback={<Loading />}>
-          <div
-            className="App-header"
-            style={{ backgroundImage: `url(${Background})` }}>
-            <div className="portfolio-container">
-              <p>I am</p>
-              <h1 className="myName">Thomas Lynn</h1>
-              <a href="https://drive.google.com/file/d/1mbGLlRlxmxBShDw_miLVtW77X0kDfiY7/view?usp=drive_link">
-                <p>You can download my personal resume by clicking here.</p>
-              </a>
-            </div>
-          </div>
-          <div className="forBgImg">
-            <section className="about-section">
-              <div className="portfolio-container">
-                <h2>About Me</h2>
-                <About />
-                <p>
-                  Hello! I'm Thant Lynn Naing and a passionate web developer
-                  with expertise in React.js, JavaScript, and now I'm learning
-                  tailwindCSS and nextJS.
-                </p>
-              </div>
-            </section>
-            <section className="projects-section">
-              <div className="portfolio-container">
-                <h2>Projects</h2>
-                <div className="projectsContainer">
-                  <Projects />
-                </div>
-              </div>
-            </section>
-            <section className="skills-section">
-              <div className="portfolio-container">
-                <h2>Skills</h2>
-                <SkillImgs />
-              </div>
-            </section>
-            <section className="contact-section">
-              <div className="portfolio-container">
-                <h2>Contact Me</h2>
-                <ContactImgs />
-              </div>
-            </section>
-          </div>
-        </Suspense>
+        <RouterConfig />
       </div>
     </>
   );

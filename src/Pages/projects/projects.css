@@ -1,0 +1,35 @@
+.buttons {
+  height: 100;
+  width: 200;
+  margin: 15px;
+  border-width: 2px; /* Adjust the width of the border */
+  background-color: transparent;
+  border-style: solid;
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  border-image: linear-gradient(
+    to right,
+    #00ff33,
+    #2ee5cd,
+    #2eb7e5,
+    #2e56e5,
+    #862ee5
+  ); /* Adjust the gradient colors */
+  border-image-slice: 1; /* Use 1 to slice the entire border */
+}
+.projectText {
+  height: auto;
+  width: 300px;
+}
+.projects {
+  display: flex;
+  flex-direction: column; /* Default flex direction for small screens */
+
+  @media (min-width: 768px) {
+    flex-direction: row; /* Change flex direction to row for screens larger than 768px */
+  }
+
+  /* Add more media queries for other screen sizes if needed */
+}
+
+/* Add more styles as needed */

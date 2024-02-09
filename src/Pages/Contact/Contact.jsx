@@ -44,20 +44,26 @@ export default function ContactImgs() {
 
   return (
     <>
-      <h3>You can contact me via:</h3>
-      <div className="ImgHolder">
-        {ContactImgs.map((contactImg, Index) => (
-          <a href={contactImg.link} key={Index}>
-            <img
-              src={contactImg.src}
-              height="50"
-              width="50"
-              alt={contactImg.name}
-              className="img"
-            />
-          </a>
-        ))}
-      </div>
+      <section className="contact-section">
+        <div className="portfolio-container">
+          <h2>Contact Me</h2>
+
+          <h3>You can contact me via:</h3>
+          <div className="ImgHolder">
+            {ContactImgs.map((contactImg, Index) => (
+              <a href={contactImg.link} key={Index}>
+                <img
+                  src={contactImg.src}
+                  height="50"
+                  width="50"
+                  alt={contactImg.name}
+                  className="img"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

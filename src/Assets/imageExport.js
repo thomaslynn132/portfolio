@@ -19,7 +19,9 @@ import alyMyanmar from "./ALY-Myanmar.png";
 import ToDoList from "./ToDoList.png";
 import Portfolio from "./Portfolio.png";
 import Logo from "./logo.png";
+import PiVaping from "./PiVaping.png";
 export {
+  PiVaping,
   Logo,
   Portfolio,
   alyMyanmar,

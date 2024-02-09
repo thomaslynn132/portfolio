@@ -1,0 +1,53 @@
+/* Header.css */
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Make the header take the full height of the viewport */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+.rdrs {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  margin-top: auto;
+  justify-content: space-between;
+}
+.redirects {
+  height: 30px;
+  width: auto;
+  align-items: center;
+  justify-self: center;
+  text-decoration: none;
+  margin: 15px 50px;
+  padding: 10px 20px 0px 20px;
+  font-family: monospace;
+  background-color: #414141;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.redirects:hover {
+  background-color: #626262;
+  color: white;
+}
+
+.myName {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}

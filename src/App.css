@@ -4,12 +4,12 @@
   justify-content: center;
   align-items: center;
   -webkit-text-stroke: 0.3px #ffffff;
+  overflow-x: hidden;
 }
 
 .projects {
   display: flex;
   justify-content: flex-start;
-  overflow-x: scroll;
   white-space: nowrap;
   padding: 40px;
 }
@@ -23,34 +23,13 @@
 }
 
 .myName {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Nabla, sans-serif";
   font-display: initial;
-  color: blue;
+  color: rgb(255, 251, 0);
 }
-
-.App-header {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-  p {
-    color: rgb(255, 79, 79);
-    size: 30px;
-    font-size: 30px;
-    font-family: monospace;
-    font-weight: bolder;
-
-    -webkit-text-stroke: 1.5px #000000;
-  }
-
-  h1 {
-    color: rgb(181, 187, 0);
-    font-size: 45px;
-    -webkit-text-stroke: 1.5px #000000;
-  }
+h1 {
+  font-size: 45px;
+  -webkit-text-stroke: 1.5px #7c7c7c;
 }
 
 .ImgHolder {
@@ -60,8 +39,8 @@
   flex-direction: row;
 }
 .img:hover {
-  height: 60px;
-  width: 60px;
+  height: 55px;
+  width: 55px;
   transition: 0.75s;
 }
 .img {
@@ -72,20 +51,11 @@
   max-width: 800px;
   margin: 0 auto;
   position: sticky;
-  p:hover {
-    color: rgb(0, 162, 255);
-    transition: 1s;
-    -webkit-text-stroke: 1px #000;
-  }
 }
 
 h1 {
   font-size: 40px;
   margin-bottom: 10px;
-}
-p {
-  font-size: 25px;
-  font-weight: bolder;
 }
 
 .about,
@@ -183,26 +153,4 @@ section:hover {
   color: red;
   transition: 0.75s;
   font-weight: bold;
-}
-.Loading {
-  position: relative;
-}
-
-.loading-text {
-  position: absolute;
-  color: chartreuse;
-  -webkit-text-stroke: #000000 1px solid;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the label */
-  animation: rotateAnimation 5s linear infinite; /* Continuous rotation with a duration of 5 seconds */
-}
-
-@keyframes rotateAnimation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

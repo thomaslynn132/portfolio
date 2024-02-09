@@ -35,18 +35,24 @@ export default function SkillImgs() {
   ];
   return (
     <>
-      <div className="ImgHolder">
-        {skillImgs.map((skillImg, Index) => (
-          <img
-            src={skillImg.src}
-            height="50"
-            width="50"
-            alt={skillImg.name}
-            className="img"
-            key={Index}
-          />
-        ))}
-      </div>
+      <section className="skills-section">
+        <div className="portfolio-container">
+          <h2>Skills</h2>
+
+          <div className="ImgHolder">
+            {skillImgs.map((skillImg, Index) => (
+              <img
+                src={skillImg.src}
+                height="50"
+                width="50"
+                alt={skillImg.name}
+                className="img"
+                key={Index}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

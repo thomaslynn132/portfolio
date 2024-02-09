@@ -1,0 +1,35 @@
+//Loading.sass
+.Loading {
+  position: relative;
+  text-align: center;
+  margin-top: 50px; /* Adjust as needed */
+}
+
+.loading-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.loading-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px; /* Adjust as needed */
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@for $i from 1 through 20 {
+  /* Adjust the number based on your needs */
+  .loading-text span:nth-child(#{$i}) {
+    transform: rotate(#{($i - 1) * 18}deg); /* Adjust the angle as needed */
+  }
+}
