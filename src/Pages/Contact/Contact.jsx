@@ -46,7 +46,7 @@ export default function ContactImgs() {
     <>
       <section className="contact-section">
         <div className="portfolio-container">
-          <h2>Contact Me</h2>
+          <h1>Contact Me</h1>
 
           <h3>You can contact me via:</h3>
           <div className="ImgHolder">

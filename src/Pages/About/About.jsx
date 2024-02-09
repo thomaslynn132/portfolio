@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SkillImgs from "../skillImages/skillImgs";
 import ContactImgs from "../Contact/Contact";
 import { FaFileDownload } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const About = () => {
   const [showMore, setShowMore] = useState(false);
 
@@ -47,6 +48,14 @@ const About = () => {
       </section>
       <SkillImgs />
       <ContactImgs />
+      <div className="rdrs">
+        <div className="redirects">
+          <Link to="/">Return Home Page</Link>
+        </div>
+        <div className="redirects">
+          <Link to="projects">Check my projects</Link>
+        </div>
+      </div>
     </>
   );
 };

@@ -37,7 +37,7 @@ export default function SkillImgs() {
     <>
       <section className="skills-section">
         <div className="portfolio-container">
-          <h2>Skills</h2>
+          <h1>Skills</h1>
 
           <div className="ImgHolder">
             {skillImgs.map((skillImg, Index) => (
