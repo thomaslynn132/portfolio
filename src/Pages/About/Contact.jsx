@@ -44,7 +44,7 @@ export default function ContactImgs() {
 
   return (
     <>
-      <section className="contact-section">
+      <section className="contact-section contact">
         <div className="portfolio-container">
           <h1>Contact Me</h1>
 
@@ -57,7 +57,7 @@ export default function ContactImgs() {
                   height="50"
                   width="50"
                   alt={contactImg.name}
-                  className="img"
+                  className="img fadedIn"
                 />
               </a>
             ))}

@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Loading from "./Pages/Loading/Loading";
 import RouterConfig from "./Routing/RouterConfig";
+import { motion, useScroll } from "framer-motion";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
+  const { scrollYProgress } = useScroll();
   useEffect(() => {
     // Simulating an asynchronous operation (replace this with your actual async operation)
     const fetchData = async () => {
@@ -37,7 +39,9 @@ function App() {
   return (
     <>
       <div className="App">
-        <RouterConfig />
+        <motion.div style={{ scaleX: scrollYProgress }}>
+          <RouterConfig />
+        </motion.div>
       </div>
     </>
   );

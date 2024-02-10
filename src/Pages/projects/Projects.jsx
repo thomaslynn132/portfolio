@@ -65,10 +65,10 @@ export default function Projects() {
     if (!selectedProject) {
       return (
         <>
-          <p>
+          <div className="fadedIn">
             These projects show my late works as a react js developer as a
             professional carrer background.
-          </p>
+          </div>
         </>
       );
     }
@@ -76,7 +76,7 @@ export default function Projects() {
     return (
       <>
         <h1>Used Skills</h1>
-        <p>{selectedProject.usedTech}</p>
+        <p className="fadedIn">{selectedProject.usedTech}</p>
       </>
     );
   };
@@ -85,27 +85,34 @@ export default function Projects() {
     if (!selectedProject) {
       return (
         <>
-          <img src={myPhoto} alt="My Face" height={320} />
+          <img
+            src={myPhoto}
+            alt="My Face"
+            height={320}
+            className="fadedIn"
+            style={{ border: "3px solid", borderRadius: "5%" }}
+          />
         </>
       );
     }
 
     return (
-      <div className="project">
+      <div className="project ">
         <img
           src={selectedProject.img}
           alt={selectedProject.name}
           height={200}
           width={300}
+          className="fadedIn"
           style={{ transition: "1s" }}
         />
         <br />
         <div>
           <a href={selectedProject.gitHub}>
-            <button className="buttons">GitHub</button>
+            <button className="buttons fadedIn">GitHub</button>
           </a>
           <a href={selectedProject.liveDemo}>
-            <button className="buttons">Live Demo</button>
+            <button className="buttons fadedIn">Live Demo</button>
           </a>
         </div>
       </div>
@@ -116,7 +123,7 @@ export default function Projects() {
     <>
       {" "}
       <section className="projects-section portfolio-container">
-        <div className="">
+        <div>
           <h2>Projects</h2>
           <div className="projects">
             <div>
@@ -141,21 +148,19 @@ export default function Projects() {
                   </li>
                 ))}
               </ul>
-              <ProjectDescription />
             </div>
           </div>
+          <ProjectDescription />
         </div>
       </section>
-      <section className="projects-section portfolio-container">
-        <div className="rdrs">
-          <div className="redirects">
-            <Link to="about">Have a look about me</Link>
-          </div>
-          <div className="redirects">
-            <Link to="projects">Check my projects</Link>
-          </div>
+      <div className="rdrs">
+        <div className="redirects fadedIn">
+          <Link to="/about">About Me</Link>
         </div>
-      </section>
+        <div className="redirects fadedIn">
+          <Link to="/">Home Page</Link>
+        </div>
+      </div>
     </>
   );
 }

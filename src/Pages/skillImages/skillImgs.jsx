@@ -35,7 +35,7 @@ export default function SkillImgs() {
   ];
   return (
     <>
-      <section className="skills-section">
+      <section className="skills-section skills">
         <div className="portfolio-container">
           <h1>Skills</h1>
 

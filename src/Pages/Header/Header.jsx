@@ -23,28 +23,34 @@ const Header = () => {
       <div
         className="App-header"
         style={{ backgroundImage: `url(${Background})` }}>
-        <p style={{ fontSize: "30px" }}>I am</p>
+        <p style={{ fontSize: "30px" }} className="fadedIn">
+          I am
+        </p>
         <h1 className={fade} style={{ fontSize: "40px" }}>
           {words[currentWordIndex]}
         </h1>
-        <a href="https://drive.google.com/file/d/1mbGLlRlxmxBShDw_miLVtW77X0kDfiY7/view?usp=drive_link">
+        <a href="https://drive.google.com/file/d/1Sv3566a5IJHxTSI9ES_FQ3Wx_ylt9PbL/view?usp=drivesdk">
           <p
             style={{
               color: "cyan",
               WebkitTextStroke: "1px black 0.3",
               margin: "15px",
             }}>
-            <FaFileDownload style={{ color: "yellow" }} />
+            <FaFileDownload
+              size={15}
+              className="fadedIn"
+              style={{ color: "yellow" }}
+            />
             Download My CV
           </p>
         </a>
 
         <div className="rdrs">
-          <div className="redirects">
-            <Link to="about">Have a look about me</Link>
+          <div className="redirects fadedIn">
+            <Link to="about">About Me</Link>
           </div>
-          <div className="redirects">
-            <Link to="projects">Check my projects</Link>
+          <div className="redirects fadedIn">
+            <Link to="/projects">My Projects</Link>
           </div>
         </div>
       </div>

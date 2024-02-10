@@ -3,7 +3,7 @@ import { Logo } from "../../Assets/imageExport";
 import "./Loading.scss"; // Assuming you have a separate CSS file for styling
 
 const Loading = () => {
-  const text = "My Portfolio is on the way, just a second";
+  const text = "Just a second";
   const textArray = text.split(" ");
 
   const renderSpans = () => {
