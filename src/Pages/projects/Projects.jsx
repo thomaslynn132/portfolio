@@ -8,6 +8,7 @@ import {
   Portfolio,
   PiVaping,
   myPhoto,
+  Books,
 } from "../../Assets/imageExport";
 import "./projects.css";
 export default function Projects() {
@@ -25,6 +26,15 @@ export default function Projects() {
       gitHub: "https://github.com/thomaslynn132/English-Grammar",
       liveDemo: "https://learn-english-with-thoma-3bd6e.web.app",
       usedTech: "HTML,CSS3,Javascript,ReactJs",
+    },
+    {
+      name: "My Library App",
+      img: Books,
+      gitHub: "https://github.com/thomaslynn132/my-library-app",
+      liveDemo:
+        "https://my-library-app-omega.vercel.app/books/MndnMPstRVjbAVAQSu0F",
+      usedTech:
+        "HTML5,CSS3,Javascript,ReactJs,Firebase Realtime Dabase, Firebase Storage",
     },
     {
       name: "A Linn Yaung Myanmar co.ltd",

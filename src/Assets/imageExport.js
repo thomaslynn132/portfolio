@@ -20,7 +20,9 @@ import ToDoList from "./ToDoList.png";
 import Portfolio from "./Portfolio.png";
 import Logo from "./logo.png";
 import PiVaping from "./PiVaping.png";
+import Books from "./Books.png";
 export {
+  Books,
   PiVaping,
   Logo,
   Portfolio,

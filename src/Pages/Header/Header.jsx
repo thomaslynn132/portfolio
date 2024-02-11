@@ -47,7 +47,7 @@ const Header = () => {
 
         <div className="rdrs">
           <div className="redirects fadedIn">
-            <Link to="about">About Me</Link>
+            <Link to="/about">About Me</Link>
           </div>
           <div className="redirects fadedIn">
             <Link to="/projects">My Projects</Link>
