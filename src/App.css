@@ -179,6 +179,3 @@ a {
   transition: 0.75s;
   font-weight: bold;
 }
-::-webkit-scrollbar {
-  display: none;
-}
