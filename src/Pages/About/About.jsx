@@ -12,7 +12,7 @@ const About = () => {
 
   return (
     <>
-      <section className="about-section">
+      <section className="about-section" style={{ overflowX: "hidden" }}>
         <div className="portfolio-container">
           <div className="aboutContainer about fadedIn">
             <h2>About Me</h2>

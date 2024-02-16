@@ -58,7 +58,7 @@ export default function Projects() {
       usedTech: "HTML,CSS3,Javascript,ReactJs",
     },
     {
-      name: "Homepage design for freelancers.com contest",
+      name: "Homepage design for contest",
       img: homePage,
       gitHub: "https://github.com/thomaslynn132/homepage-design",
       liveDemo: null,
@@ -75,7 +75,7 @@ export default function Projects() {
     if (!selectedProject) {
       return (
         <>
-          <div className="fadedIn">
+          <div className="fadedIn" style={{ padding: "10px" }}>
             These projects show my late works as a react js developer as a
             professional carrer background.
           </div>
@@ -153,7 +153,8 @@ export default function Projects() {
                   <li
                     key={index}
                     onClick={() => chooseProject(index)}
-                    style={{ textAlign: "start", cursor: "pointer" }}>
+                    style={{ textAlign: "start", cursor: "pointer" }}
+                    className="projectNames">
                     {project.name}
                   </li>
                 ))}

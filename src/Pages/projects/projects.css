@@ -1,10 +1,10 @@
 .buttons {
-  height: 100;
   width: 200;
   margin: 15px;
+  padding: 5px 20px;
   border-width: 2px; /* Adjust the width of the border */
   background-color: transparent;
-  border-style: solid;
+  border: 4px solid;
   font-weight: bolder;
   font-family: "Times New Roman", Times, serif;
   border-image: linear-gradient(
@@ -17,9 +17,21 @@
   ); /* Adjust the gradient colors */
   border-image-slice: 1; /* Use 1 to slice the entire border */
 }
+.buttons:hover {
+  background-color: rgb(177, 171, 171, 0.5);
+  transition: 1s;
+}
 .projectText {
   height: auto;
   width: 300px;
+}
+.projectNames {
+  padding: 5px;
+  margin: 5px;
+}
+.projectNames:hover {
+  background-color: rgb(177, 171, 171);
+  transition: 1s;
 }
 .projects {
   display: flex;
