@@ -4,8 +4,7 @@
   justify-content: center;
   align-items: center;
   -webkit-text-stroke: 0.3px #ffffff;
-  overflow-x: hidden;
-  animation: backwards;
+  overflow-x: hidden
 }
 .projects {
   display: flex;
