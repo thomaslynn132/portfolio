@@ -9,7 +9,7 @@ import {
   PiVaping,
   myPhoto,
   Books,
-} from "../../Assets/imageExport";
+} from "../../../Assets/imageExport";
 import "./projects.css";
 export default function Projects() {
   const projects = [

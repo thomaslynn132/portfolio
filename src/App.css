@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   -webkit-text-stroke: 0.3px #ffffff;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 .projects {
   display: flex;

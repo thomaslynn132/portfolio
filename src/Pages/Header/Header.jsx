@@ -32,9 +32,10 @@ const Header = () => {
         <a href="https://drive.google.com/file/d/1Sv3566a5IJHxTSI9ES_FQ3Wx_ylt9PbL/view?usp=drivesdk">
           <p
             style={{
-              color: "cyan",
+              color: "blue",
               WebkitTextStroke: "1px black 0.3",
               margin: "15px",
+              fontSize: "23px",
             }}>
             <FaFileDownload
               size={15}
