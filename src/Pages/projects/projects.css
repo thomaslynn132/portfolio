@@ -5,6 +5,7 @@
   border-width: 2px; /* Adjust the width of the border */
   background-color: transparent;
   border: 4px solid;
+  background-color: rgb(177, 171, 171, 0.3);
   font-weight: bolder;
   font-family: "Times New Roman", Times, serif;
   border-image: linear-gradient(
@@ -26,8 +27,10 @@
   width: 300px;
 }
 .projectNames {
-  padding: 5px;
+  padding: 8px 20px;
   margin: 5px;
+  background-color: rgba(178, 178, 178, 0.539);
+  border-radius: 30px;
 }
 .projectNames:hover {
   background-color: rgb(177, 171, 171);
