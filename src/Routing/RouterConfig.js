@@ -3,7 +3,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "../Pages/Header/Header";
 import About from "../Pages/About/About";
-import Projects from "../Pages/skillImages/projects/Projects";
+import Projects from "../Pages/projects/Projects";
 import Error from "../Pages/Error/ErrorPage";
 
 const RouterConfig = () => {
