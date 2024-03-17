@@ -7,6 +7,7 @@ import {
   Linkedin,
   Instagram,
 } from "../../Assets/imageExport";
+import { motion } from "framer-motion";
 export default function ContactImgs() {
   const myEmail = "thantlinnaing0000@gmail.com";
   const ContactImgs = [
@@ -41,6 +42,10 @@ export default function ContactImgs() {
       link: "https://www.linkedin.com/in/thant-lynn-naing-788b282a1/",
     },
   ];
+  const imgVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1 },
+  };
 
   return (
     <>
@@ -51,15 +56,20 @@ export default function ContactImgs() {
           <h3>You can contact me via:</h3>
           <div className="ImgHolder">
             {ContactImgs.map((contactImg, Index) => (
-              <a href={contactImg.link} key={Index}>
-                <img
+              <motion.a
+                href={contactImg.link}
+                key={Index}
+                variants={imgVariants}
+                initial="hidden"
+                animate="visible">
+                <motion.img
                   src={contactImg.src}
                   height="50"
                   width="50"
                   alt={contactImg.name}
                   className="img fadedIn"
                 />
-              </a>
+              </motion.a>
             ))}
           </div>
         </div>

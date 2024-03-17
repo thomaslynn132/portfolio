@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   englishGrammar,
   homePage,
@@ -12,6 +13,10 @@ import {
 } from "../../Assets/imageExport";
 import "./projects.css";
 export default function Projects() {
+  const sectionVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
   const projects = [
     {
       name: "Pi Vaping",
@@ -28,7 +33,7 @@ export default function Projects() {
       usedTech: "HTML,CSS3,Javascript,ReactJs",
     },
     {
-      name: "My Library App",
+      name: "My Library App(Still developing)",
       img: Books,
       gitHub: "https://github.com/thomaslynn132/my-library-app",
       liveDemo:
@@ -71,22 +76,36 @@ export default function Projects() {
   const chooseProject = (index) => {
     setSelectedProject(projects[index]);
   };
+
   const ProjectDescription = () => {
+    // Assuming you have a suitable motion variant defined
+
     if (!selectedProject) {
       return (
         <>
-          <div className="fadedIn" style={{ padding: "10px" }}>
-            These projects show my late works as a react js developer as a
-            professional carrer background.
-          </div>
+          <motion.div
+            className="fadedIn"
+            style={{ padding: "10px" }}
+            variants={sectionVariants}
+            initial="hidden"
+            animate="visible">
+            These projects showcase my latest work as a React.js developer in my
+            professional career background.
+          </motion.div>
         </>
       );
     }
 
     return (
       <>
-        <h1>Used Skills</h1>
-        <p className="fadedIn">{selectedProject.usedTech}</p>
+        <motion.section
+          className="projects-section portfolio-container"
+          variants={sectionVariants}
+          initial="hidden"
+          animate="visible">
+          <h1>Used Skills</h1>
+          <motion.p className="fadedIn">{selectedProject.usedTech}</motion.p>
+        </motion.section>
       </>
     );
   };
@@ -95,12 +114,15 @@ export default function Projects() {
     if (!selectedProject) {
       return (
         <>
-          <img
+          <motion.img
             src={myPhoto}
             alt="My Face"
             height={320}
             className="fadedIn"
             style={{ border: "3px solid", borderRadius: "5%" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           />
         </>
       );
@@ -131,15 +153,18 @@ export default function Projects() {
 
   return (
     <>
-      {" "}
-      <section className="projects-section portfolio-container">
+      <motion.section
+        className="projects-section portfolio-container"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}>
         <div>
           <h2>Projects</h2>
           <div className="projects">
             <div>
               <ProjectDetails />
             </div>
-            <div
+            <motion.div
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -147,23 +172,32 @@ export default function Projects() {
                 height: "auto",
                 margin: "15px",
                 padding: "10px",
-              }}>
-              <ul>
+              }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}>
+              <motion.ul
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}>
                 {projects.map((project, index) => (
-                  <li
+                  <motion.li
                     key={index}
                     onClick={() => chooseProject(index)}
-                    style={{ textAlign: "start", cursor: "pointer" }}
-                    className="projectNames">
+                    style={{ textAlign: "start" }}
+                    className="projectNames"
+                    whileHover={{ scale: 1.1, color: "#007BFF" }}
+                    whileTap={{ scale: 0.9 }}>
                     {project.name}
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
-            </div>
+              </motion.ul>
+            </motion.div>
           </div>
           <ProjectDescription />
         </div>
-      </section>
+      </motion.section>
+
       <div className="rdrs">
         <div className="redirects fadedIn">
           <Link to="/about">About Me</Link>

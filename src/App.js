@@ -2,6 +2,7 @@ import React, { useState, useEffect, Suspense } from "react";
 import "./App.css";
 import Loading from "./Pages/Loading/Loading";
 import RouterConfig from "./Routing/RouterConfig";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,13 +26,11 @@ function App() {
         setLoading(false); // Handle errors and still set loading to false
       }
     };
-
-    //   // Call the fetchData function
     fetchData();
   }, []);
 
   if (loading) {
-    return <Loading />; // Display a loading page
+    return <Loading />;
   }
 
   return (
@@ -39,6 +38,14 @@ function App() {
       <div className="App">
         <Suspense fallback={<Loading />}>
           <RouterConfig />
+          <AnimatedCursor
+            innerSize={40}
+            outerSize={50}
+            color="red"
+            outerAlpha={0.2}
+            innerScale={0.7}
+            outerScale={3}
+          />
         </Suspense>
       </div>
     </>
