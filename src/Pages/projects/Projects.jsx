@@ -10,6 +10,7 @@ import {
   PiVaping,
   myPhoto,
   Books,
+  ShalKyi,
 } from "../../Assets/imageExport";
 import "./projects.css";
 export default function Projects() {
@@ -33,7 +34,7 @@ export default function Projects() {
       usedTech: "HTML,CSS3,Javascript,ReactJs",
     },
     {
-      name: "My Library App(Still developing)",
+      name: "My Library App(Still developing, currently paused)",
       img: Books,
       gitHub: "https://github.com/thomaslynn132/my-library-app",
       liveDemo:
@@ -68,6 +69,12 @@ export default function Projects() {
       gitHub: "https://github.com/thomaslynn132/homepage-design",
       liveDemo: null,
       usedTech: "HTML5, CSS3",
+    },
+    {
+      name: "Shal Kyi Movie App",
+      img: ShalKyi,
+      gitHub: null,
+      usedTech: "HTML5, CSS3, Firebase, Boostrap, React Router, Video.js",
     },
   ];
 
