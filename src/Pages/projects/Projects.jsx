@@ -71,9 +71,10 @@ export default function Projects() {
       usedTech: "HTML5, CSS3",
     },
     {
-      name: "Shal Kyi Movie App",
+      name: "Shal Kyi Movie App(Still Developing)",
       img: ShalKyi,
       gitHub: null,
+      liveDemo: "https://movies-app-wine-seven.vercel.app/",
       usedTech: "HTML5, CSS3, Firebase, Boostrap, React Router, Video.js",
     },
   ];
