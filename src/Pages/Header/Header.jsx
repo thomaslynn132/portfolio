@@ -3,7 +3,7 @@ import { Background } from "../../Assets/imageExport";
 import { Link } from "react-router-dom";
 import { FaFileDownload } from "react-icons/fa";
 import "./Header.css";
-import Clock from "../../Components/clock";
+import ContactImgs from "../About/Contact";
 const Header = () => {
   const words = [
     "Thomas Lynn",
@@ -29,8 +29,6 @@ const Header = () => {
       <div
         className="App-header"
         style={{
-          backgroundImage: `url(${Background})`,
-          height: "100vh",
           alignItems: "center",
         }}>
         <div
@@ -41,6 +39,7 @@ const Header = () => {
             flexDirection: "row",
           }}>
           <div>
+            <ContactImgs />
             <p style={{ fontSize: "30px" }} className="fadedIn">
               I am
             </p>
@@ -64,9 +63,7 @@ const Header = () => {
               </p>
             </a>
           </div>
-          <div>
-            <Clock />
-          </div>
+          <div></div>
         </div>
         <div className="rdrs">
           <div className="redirects fadedIn">

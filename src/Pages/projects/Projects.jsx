@@ -24,14 +24,14 @@ export default function Projects() {
       img: PiVaping,
       gitHub: "https://github.com/thomaslynn132/pi_vaping_store",
       liveDemo: "https://pi-vaping-store.vercel.app/",
-      usedTech: "HTML,CSS,Javascript,ReactJs,Boostrap ",
+      usedTech: "HTML, CSS, Javascript, ReactJs, Boostrap ",
     },
     {
       name: "EnglishGrammar",
       img: englishGrammar,
       gitHub: "https://github.com/thomaslynn132/English-Grammar",
       liveDemo: "https://learn-english-with-thoma-3bd6e.web.app",
-      usedTech: "HTML,CSS3,Javascript,ReactJs",
+      usedTech: "HTML, CSS3, Javascript, ReactJs",
     },
     {
       name: "My Library App(Still developing, currently paused)",
@@ -39,29 +39,28 @@ export default function Projects() {
       gitHub: "https://github.com/thomaslynn132/my-library-app",
       liveDemo:
         "https://my-library-app-omega.vercel.app/books/MndnMPstRVjbAVAQSu0F",
-      usedTech:
-        "HTML5,CSS3,Javascript,ReactJs,Firebase Realtime Dabase, Firebase Storage",
+      usedTech: "HTML5, CSS3, Javascript, ReactJs, Firebase",
     },
     {
       name: "A Linn Yaung Myanmar co.ltd",
       img: alyMyanmar,
       gitHub: null,
       liveDemo: "https://aly-myanmar.vercel.app/",
-      usedTech: "HTML,CSS3,Javascript,ReactJs",
+      usedTech: "HTML, CSS3, Javascript, ReactJs",
     },
     {
       name: "To Do List",
       img: ToDoList,
       gitHub: "https://github.com/thomaslynn132/todolistapp",
       liveDemo: "https://delightful-donut-b6d2ea.netlify.app/",
-      usedTech: "HTML,CSS3,Javascript,ReactJs",
+      usedTech: "HTML, CSS3, Javascript, ReactJs",
     },
     {
       name: "My Portfolio",
       img: Portfolio,
       gitHub: "https://github.com/thomaslynn132/portfolio",
       liveDemo: null,
-      usedTech: "HTML,CSS3,Javascript,ReactJs",
+      usedTech: "HTML, CSS3, Javascript, ReactJs, Framer Motion",
     },
     {
       name: "Homepage design for contest",
@@ -75,7 +74,7 @@ export default function Projects() {
       img: ShalKyi,
       gitHub: null,
       liveDemo: "https://movies-app-wine-seven.vercel.app/",
-      usedTech: "HTML5, CSS3, Firebase, Boostrap, React Router, Video.js",
+      usedTech: "HTML5, CSS3, Firebase, Boostrap, React Router, Video.js, GSAP",
     },
   ];
 

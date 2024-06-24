@@ -37,7 +37,7 @@ const About = () => {
                     animate="visible"
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     style={{ height: "auto" }}>
-                    {word}{" "}
+                    {word}
                   </motion.span>
                 ))}
               </motion.p>
