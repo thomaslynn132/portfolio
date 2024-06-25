@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SkillImgs from "../skillImages/skillImgs";
-import ContactImgs from "./Contact";
 import { FaFileDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -37,11 +36,11 @@ const About = () => {
                     animate="visible"
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     style={{ height: "auto" }}>
-                    {word}
+                    {word + " "}
                   </motion.span>
                 ))}
               </motion.p>
-              <a href="https://drive.google.com/file/d/1Sv3566a5IJHxTSI9ES_FQ3Wx_ylt9PbL/view?usp=drivesdk">
+              <a href="https://drive.google.com/file/d/1U_26wq6bljuFrHZH2L9JOXxxqrJp7f0-/view?usp=drive_link">
                 <p
                   style={{
                     color: "red",
@@ -57,7 +56,6 @@ const About = () => {
         </div>
       </div>
       <SkillImgs />
-      <ContactImgs />
       <div className="rdrs ">
         <div className="redirects fadedIn">
           <Link to="/">Home Page</Link>

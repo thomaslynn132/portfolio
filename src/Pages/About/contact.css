@@ -1,0 +1,18 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.contactImgs {
+  margin: 5px;
+}
+/* Apply the animation to the <p> element */
+.contactImgs:hover {
+  display: inline-block; /* Ensures the element can be transformed */
+  animation: rotate 2s infinite linear; /* 2s for duration, infinite for repeating, linear for constant speed */
+  color: red;
+  transition: 1s;
+}

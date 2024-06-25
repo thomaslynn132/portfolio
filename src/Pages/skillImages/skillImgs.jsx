@@ -1,36 +1,36 @@
 import {
-  html5,
-  Css3,
-  javascript,
-  Bootstrap,
-  react,
-  GitHub,
-} from "../../Assets/imageExport";
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+  FaReact,
+  FaGithub,
+} from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
 export default function SkillImgs() {
   const skillImgs = [
     {
       name: "HTML 5",
-      src: html5,
+      src: <FaHtml5 size={50} />,
     },
     {
       name: "CSS 3",
-      src: Css3,
+      src: <FaCss3Alt size={50} />,
     },
     {
       name: "JavaScript",
-      src: javascript,
+      src: <IoLogoJavascript size={50} />,
     },
     {
       name: "Bootstrap",
-      src: Bootstrap,
+      src: <FaBootstrap size={50} />,
     },
     {
       name: "React Js",
-      src: react,
+      src: <FaReact size={50} />,
     },
     {
       name: "GitHub",
-      src: GitHub,
+      src: <FaGithub size={50} />,
     },
   ];
   return (
@@ -39,16 +39,11 @@ export default function SkillImgs() {
         <div className="portfolio-container">
           <h1>Skills</h1>
 
-          <div className="ImgHolder">
+          <div className="ImgHolder" style={{ height: "auto" }}>
             {skillImgs.map((skillImg, Index) => (
-              <img
-                src={skillImg.src}
-                height="50"
-                width="50"
-                alt={skillImg.name}
-                className="img"
-                key={Index}
-              />
+              <div className="skillImgs" key={Index} style={{ width: "30vw" }}>
+                {skillImg.src} <br /> {skillImg.name}
+              </div>
             ))}
           </div>
         </div>

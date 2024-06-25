@@ -1,41 +1,15 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { Suspense } from "react";
 import "./App.css";
 import Loading from "./Pages/Loading/Loading";
 import RouterConfig from "./Routing/RouterConfig";
 import AnimatedCursor from "react-animated-cursor";
+import DayOrNightMode from "./Components/DayOrNightMode";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulating an asynchronous operation (replace this with your actual async operation)
-    const fetchData = async () => {
-      try {
-        // Perform your asynchronous operation here
-        //       // For example, fetching data from an API
-        const response = await fetch("your-api-endpoint");
-        const data = await response.json();
-
-        // Simulating a delay for demonstration purposes
-        //       await new Promise((resolve) => setTimeout(resolve, 5000));
-
-        //       // Set loading to false when the operation is complete
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setLoading(false); // Handle errors and still set loading to false
-      }
-    };
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <Loading />;
-  }
-
   return (
     <>
       <div className="App">
+        <DayOrNightMode />
         <Suspense fallback={<Loading />}>
           <RouterConfig />
           <AnimatedCursor

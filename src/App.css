@@ -3,16 +3,36 @@
   color: rgb(0, 0, 0);
   justify-content: center;
   align-items: center;
-  -webkit-text-stroke: 0.3px #ffffff;
   overflow-x: hidden;
+}
+.dayornight {
+  position: sticky;
+  align-self: flex-end;
 }
 .projects {
   display: flex;
   justify-content: flex-start;
   white-space: nowrap;
 }
+.night * {
+  color: #ffffff;
+}
+.night .App {
+  background-image: url("../src/Assets/TNight.jpg");
+  background-size: 250px;
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 
 .App {
+  background-image: url("../src/Assets/T.jpg");
+  background-size: 250px;
+  background-repeat: repeat;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -26,16 +46,18 @@
   color: rgb(255, 251, 0);
   -webkit-text-stroke: 1.5px #000;
 }
+.night h1 {
+  color: yellowgreen;
+}
 h1 {
   font-size: 45px;
-  -webkit-text-stroke: 1.5px #7c7c7c;
+  color: aqua;
 }
 
 .ImgHolder {
   margin-left: 0px;
   margin-top: 0px;
-  position: flex;
-  flex-direction: row;
+  display: flex;
 }
 .img:hover {
   height: 55px;
@@ -52,8 +74,7 @@ h1 {
 }
 .redirects {
   font-size: 12px;
-  height: 30px;
-  width: auto;
+  width: 75px;
   align-items: center;
   justify-self: center;
   margin: 15px 50px;
@@ -63,6 +84,9 @@ h1 {
   background-color: rgba(189, 189, 189, 0.3);
   border: 1px solid #007bff;
 }
+.night.redirects {
+  border: cyan;
+}
 .redirects:hover {
   background-color: #626262;
   color: white;
@@ -71,7 +95,9 @@ h1 {
 .img {
   margin: 10px;
 }
-
+.App {
+  background-image: "";
+}
 .portfolio-container {
   max-width: 800px;
   margin: 0 auto;
@@ -82,7 +108,15 @@ h1 {
   font-size: 30px;
   margin-bottom: 10px;
 }
-
+.skillImgs {
+  padding: 5px;
+  position: relative;
+}
+.skillImgs:hover {
+  scale: 1.2;
+  color: rgba(97, 107, 57, 0.663);
+  transition: 1s;
+}
 .about,
 .skills,
 .contact {
@@ -91,15 +125,16 @@ h1 {
   border-radius: 15px;
 }
 h2:hover {
-  color: rgb(0, 211, 211);
+  color: rgb(172, 237, 255);
   transition: 1s;
 }
 h2 {
   color: cyan;
   font-size: 45px;
-  -webkit-text-stroke: 1.5px #000000;
 }
-
+.night h2 {
+  color: yellowgreen;
+}
 .contact-section p {
   margin: 10px 0;
 }
@@ -161,7 +196,6 @@ section:hover {
 a {
   font-size: 14px;
   font-weight: bold;
-  -webkit-text-stroke: 0.1px #000000;
 }
 .project {
   font-size: small;

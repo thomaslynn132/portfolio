@@ -143,7 +143,7 @@ export default function Projects() {
           height={200}
           width={300}
           className="fadedIn"
-          style={{ transition: "1s" }}
+          style={{ transition: "1s", borderRadius: "15px" }}
         />
         <br />
         <div>
@@ -165,7 +165,7 @@ export default function Projects() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}>
-        <div>
+        <div style={{ width: "auto" }}>
           <h2>Projects</h2>
           <div className="projects">
             <div>
@@ -175,9 +175,9 @@ export default function Projects() {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                width: "300px",
+                width: "auto",
                 height: "auto",
-                margin: "15px",
+                margin: "10px",
                 padding: "10px",
               }}
               initial={{ opacity: 0, x: -20 }}
