@@ -34,7 +34,7 @@ export default function Projects() {
       usedTech: "HTML, CSS3, Javascript, ReactJs",
     },
     {
-      name: "My Library App(Still developing, currently paused)",
+      name: "My Library App (currently paused)",
       img: Books,
       gitHub: "https://github.com/thomaslynn132/my-library-app",
       liveDemo:
@@ -70,7 +70,7 @@ export default function Projects() {
       usedTech: "HTML5, CSS3",
     },
     {
-      name: "Shal Kyi Movie App(Still Developing)",
+      name: "Shal Kyi Movie App (Still Developing)",
       img: ShalKyi,
       gitHub: null,
       liveDemo: "https://movies-app-wine-seven.vercel.app/",
@@ -162,6 +162,7 @@ export default function Projects() {
     <>
       <motion.section
         className="projects-section portfolio-container"
+        style={{ margin: "15px", padding: "15px" }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}>
@@ -204,15 +205,6 @@ export default function Projects() {
           <ProjectDescription />
         </div>
       </motion.section>
-
-      <div className="rdrs">
-        <div className="redirects fadedIn">
-          <Link to="/about">About Me</Link>
-        </div>
-        <div className="redirects fadedIn">
-          <Link to="/">Home Page</Link>
-        </div>
-      </div>
     </>
   );
 }

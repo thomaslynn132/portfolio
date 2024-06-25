@@ -1,16 +1,17 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import "./App.css";
 import Loading from "./Pages/Loading/Loading";
 import RouterConfig from "./Components/RouterConfig";
 import AnimatedCursor from "react-animated-cursor";
 import DayOrNightMode from "./Components/DayOrNightMode";
 import { NavLink } from "react-router-dom";
+import { BiHome } from "react-icons/bi";
+import { GrContact } from "react-icons/gr";
+import { GoProject } from "react-icons/go";
+import { HiInformationCircle } from "react-icons/hi";
 function App() {
   const navLinkStyles = ({ isActive }) => {
     return {
-      color: isActive ? "cyan" : "white",
-      fontWeight: isActive ? "bolder" : "normal",
-      textDecoration: isActive ? "none" : "underline",
       backgroundColor: isActive ? "skyblue" : "none",
     };
   };
@@ -20,19 +21,27 @@ function App() {
         <div className="rdrs ">
           <div className="rdrs ">
             <NavLink style={navLinkStyles} to="/">
-              <div className="redirects fadedIn">Home</div>{" "}
+              <div className="redirects fadedIn">
+                <BiHome size={25} />
+              </div>{" "}
             </NavLink>
 
             <NavLink to="/about" style={navLinkStyles}>
-              <div className="redirects fadedIn">About</div>{" "}
+              <div className="redirects fadedIn">
+                <HiInformationCircle size={25} />
+              </div>{" "}
             </NavLink>
 
             <NavLink to="/contact" style={navLinkStyles}>
-              <div className="redirects fadedIn">Contact</div>{" "}
+              <div className="redirects fadedIn">
+                <GrContact size={25} />
+              </div>{" "}
             </NavLink>
 
             <NavLink to="/projects" style={navLinkStyles}>
-              <div className="redirects fadedIn">Projects</div>{" "}
+              <div className="redirects fadedIn">
+                <GoProject size={25} />
+              </div>{" "}
             </NavLink>
           </div>
           <DayOrNightMode />
