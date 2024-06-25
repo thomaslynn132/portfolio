@@ -56,14 +56,6 @@ const About = () => {
         </div>
       </div>
       <SkillImgs />
-      <div className="rdrs ">
-        <div className="redirects fadedIn">
-          <Link to="/">Home Page</Link>
-        </div>
-        <div className="redirects fadedIn">
-          <Link to="/projects">My Projects</Link>
-        </div>
-      </div>
     </>
   );
 };

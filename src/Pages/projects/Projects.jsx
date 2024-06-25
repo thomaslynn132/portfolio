@@ -110,7 +110,7 @@ export default function Projects() {
           variants={sectionVariants}
           initial="hidden"
           animate="visible">
-          <h1>Used Skills</h1>
+          <h1>Used Technologies</h1>
           <motion.p className="fadedIn">{selectedProject.usedTech}</motion.p>
         </motion.section>
       </>

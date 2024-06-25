@@ -1,14 +1,11 @@
 /* src/App.css */
 * {
   color: rgb(0, 0, 0);
-  justify-content: center;
-  align-items: center;
+  font-weight: bold;
   overflow-x: hidden;
+  transition: 1;
 }
-.dayornight {
-  position: sticky;
-  align-self: flex-end;
-}
+
 .projects {
   display: flex;
   justify-content: flex-start;
@@ -39,7 +36,9 @@
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.night .myName {
+  -webkit-text-stroke: #ffffff;
+}
 .myName {
   font-family: "Nabla, sans-serif";
   font-display: initial;
@@ -51,7 +50,7 @@
 }
 h1 {
   font-size: 45px;
-  color: aqua;
+  color: rgb(0, 132, 132);
 }
 
 .ImgHolder {
@@ -68,28 +67,38 @@ h1 {
 .rdrs {
   display: flex;
   flex-direction: row;
+  position: sticky;
   margin-bottom: 15px;
   margin-top: auto;
   justify-content: space-between;
 }
 .redirects {
   font-size: 12px;
-  width: 75px;
+  width: 40px;
   align-items: center;
   justify-self: center;
-  margin: 15px 50px;
-  padding: 10px 30px;
+  margin: 5px;
+  padding: 15px 30px;
   border-radius: 30px;
   font-family: monospace;
+  font-weight: bolder;
   background-color: rgba(189, 189, 189, 0.3);
-  border: 1px solid #007bff;
+  border: 2px solid #dc3700;
 }
-.night.redirects {
-  border: cyan;
+.night .redirects {
+  border: 2px solid cyan;
+}
+.contact:hover {
+  background-color: rgb(193, 193, 193, 0.4);
+}
+.contact {
+  margin: 30px;
+  padding: 15px;
+  background-color: rgb(193, 193, 193, 0.2);
 }
 .redirects:hover {
   background-color: #626262;
-  color: white;
+  color: rgb(196, 0, 0);
 }
 
 .img {
@@ -110,6 +119,7 @@ h1 {
 }
 .skillImgs {
   padding: 5px;
+  margin: 25px 0px;
   position: relative;
 }
 .skillImgs:hover {
@@ -129,7 +139,7 @@ h2:hover {
   transition: 1s;
 }
 h2 {
-  color: cyan;
+  color: rgb(0, 147, 238);
   font-size: 45px;
 }
 .night h2 {
@@ -203,7 +213,7 @@ a {
   height: auto;
   padding: 15px;
   margin: 15px;
-  background-color: rgb(2, 126, 143, 0.5);
+  background-color: rgb(2, 126, 143, 0.3);
   box-shadow: 10px 5px 0px 0px;
   border-radius: 3%;
 }

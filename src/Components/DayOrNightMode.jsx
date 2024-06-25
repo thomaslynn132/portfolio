@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { BsCloudSunFill } from "react-icons/bs";
 import { GiNightSky } from "react-icons/gi";
-import { WiDayCloudy } from "react-icons/wi";
-
 const DayOrNightMode = () => {
-  const [nightMode, setNightMode] = useState(false);
+  const [nightMode, setNightMode] = useState(true);
 
   const toggleNightMode = () => {
     setNightMode(!nightMode);
@@ -20,7 +19,23 @@ const DayOrNightMode = () => {
   return (
     <>
       <div className="dayOrNightImg" onClick={toggleNightMode}>
-        {nightMode ? <GiNightSky /> : <WiDayCloudy />}
+        {nightMode ? (
+          <BsCloudSunFill
+            size={50}
+            style={{
+              marginRight: "15px",
+              marginTop: "15px",
+            }}
+          />
+        ) : (
+          <GiNightSky
+            size={50}
+            style={{
+              marginRight: "15px",
+              marginTop: "15px",
+            }}
+          />
+        )}
       </div>
     </>
   );

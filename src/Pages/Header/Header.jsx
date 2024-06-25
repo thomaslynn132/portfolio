@@ -53,24 +53,12 @@ const Header = () => {
                   margin: "15px",
                   fontSize: "23px",
                 }}>
-                <FaFileDownload
-                  size={15}
-                  className="fadedIn"
-                  style={{ color: "yellow" }}
-                />
+                <FaFileDownload size={25} className="fadedIn" />
                 Download My CV
               </p>
             </a>
           </div>
           <div></div>
-        </div>
-        <div className="rdrs">
-          <div className="redirects fadedIn">
-            <Link to="/about">About Me</Link>
-          </div>
-          <div className="redirects fadedIn">
-            <Link to="/projects">My Projects</Link>
-          </div>
         </div>
       </div>
     </>

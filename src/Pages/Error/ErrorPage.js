@@ -4,17 +4,18 @@ const Error = () => {
     <div style={{ height: "600px" }}>
       <h2>Your requested address was not found.</h2>
       <h1> Would You Like to Go Back to</h1>
+      <div className="void" style={{ margin: "20px" }}></div>
       <Link to="/" className="redirects">
-        Home Page
-      </Link>{" "}
-      <br />
-      <p> or</p>
-      <Link to="/about" className="redirects">
-        About Page
+        Home
       </Link>
-      <p> or</p>
+      <Link to="/about" className="redirects">
+        About
+      </Link>
       <Link to="/projects" className="redirects">
-        Projects Page
+        Projects
+      </Link>
+      <Link to="./contact" className="redirects">
+        Contact
       </Link>
     </div>
   );
