@@ -38,7 +38,6 @@ const Header = () => {
             flexDirection: "row",
           }}>
           <div>
-            <ContactImgs />
             <p style={{ fontSize: "30px" }} className="fadedIn">
               I am
             </p>
@@ -60,6 +59,7 @@ const Header = () => {
           </div>
           <div></div>
         </div>
+        <ContactImgs />
       </div>
     </>
   );
