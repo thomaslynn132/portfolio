@@ -45,11 +45,7 @@ const Header = () => {
             <h1 className={fade} style={{ fontSize: "40px" }}>
               {words[currentWordIndex]}
             </h1>
-<<<<<<< HEAD
             <a href="https://drive.google.com/file/d/1U_26wq6bljuFrHZH2L9JOXxxqrJp7f0-/view?usp=drive_link">
-=======
-            <a href="https://drive.google.com/file/d/1pRnb3kqolDy8-jPoHYwXbPziifQ6BqTj/view?usp=drive_link">
->>>>>>> 795a31d9eef8c97ad0fbc53d4353ebe3e744bd77
               <p
                 style={{
                   color: "blue",
