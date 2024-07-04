@@ -22,25 +22,25 @@ function App() {
           <div className="rdrs ">
             <NavLink style={navLinkStyles} to="/">
               <div className="redirects fadedIn">
-                <BiHome size={25} />
+                <BiHome size={20} />
               </div>{" "}
             </NavLink>
 
             <NavLink to="/about" style={navLinkStyles}>
               <div className="redirects fadedIn">
-                <HiInformationCircle size={25} />
+                <HiInformationCircle size={20} />
               </div>{" "}
             </NavLink>
 
             <NavLink to="/contact" style={navLinkStyles}>
               <div className="redirects fadedIn">
-                <GrContact size={25} />
+                <GrContact size={20} />
               </div>{" "}
             </NavLink>
 
             <NavLink to="/projects" style={navLinkStyles}>
               <div className="redirects fadedIn">
-                <GoProject size={25} />
+                <GoProject size={20} />
               </div>{" "}
             </NavLink>
           </div>

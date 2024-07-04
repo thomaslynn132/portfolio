@@ -35,7 +35,7 @@
   border-radius: 30px;
 }
 .projectNames:hover {
-  background-color: rgba(177, 171, 171, 0.449);
+  background-color: rgb(177, 171, 171);
   transition: 1s;
 }
 .projects {
