@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { FaFileDownload } from "react-icons/fa";
 import "./Header.css";
 import ContactImgs from "../About/Contact";
@@ -44,7 +43,7 @@ const Header = () => {
             <h1 className={fade} style={{ fontSize: "40px" }}>
               {words[currentWordIndex]}
             </h1>
-            <a href="https://drive.google.com/file/d/1eZFIX6fFgqYXDYebUyA5pNiz7gv_GUnT/view?usp=drive_link">
+            <a href="https://drive.google.com/file/d/1cyHSKsL7t06IPm-Y0Dq11IKlRBSLGQy5/view?usp=sharing">
               <p
                 style={{
                   color: "blue",

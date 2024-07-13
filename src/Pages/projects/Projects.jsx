@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   englishGrammar,
@@ -20,6 +19,13 @@ export default function Projects() {
   };
   const projects = [
     {
+      name: "The WPPOOL Index",
+      img: Books,
+      gitHub: "https://github.com/thomaslynn132/wppoolindex",
+      liveDemo: "https://wppoolindex.vercel.app/",
+      usedTech: "HTML5, CSS3, Javascript, ReactJs, Chart Js",
+    },
+    {
       name: "Pi Vaping",
       img: PiVaping,
       gitHub: "https://github.com/thomaslynn132/pi_vaping_store",
@@ -32,14 +38,6 @@ export default function Projects() {
       gitHub: "https://github.com/thomaslynn132/English-Grammar",
       liveDemo: "https://learn-english-with-thoma-3bd6e.web.app",
       usedTech: "HTML, CSS3, Javascript, ReactJs",
-    },
-    {
-      name: "My Library App (currently paused)",
-      img: Books,
-      gitHub: "https://github.com/thomaslynn132/my-library-app",
-      liveDemo:
-        "https://my-library-app-omega.vercel.app/books/MndnMPstRVjbAVAQSu0F",
-      usedTech: "HTML5, CSS3, Javascript, ReactJs, Firebase",
     },
     {
       name: "A Linn Yaung Myanmar co.ltd",

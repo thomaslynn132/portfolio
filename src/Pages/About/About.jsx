@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import SkillImgs from "../skillImages/skillImgs";
 import { FaFileDownload } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const About = () => {
   const [showLess, setShowMore] = useState(
@@ -40,7 +39,7 @@ const About = () => {
                   </motion.span>
                 ))}
               </motion.p>
-              <a href="https://drive.google.com/file/d/1eZFIX6fFgqYXDYebUyA5pNiz7gv_GUnT/view?usp=drive_link">
+              <a href="https://drive.google.com/file/d/1cyHSKsL7t06IPm-Y0Dq11IKlRBSLGQy5/view?usp=sharing">
                 <p
                   style={{
                     color: "red",

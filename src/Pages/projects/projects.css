@@ -10,14 +10,6 @@
   background-color: rgb(177, 171, 171, 0.3);
   font-weight: bolder;
   font-family: "Times New Roman", Times, serif;
-  border-image: linear-gradient(
-    to right,
-    #00ff33,
-    #2ee5cd,
-    #2eb7e5,
-    #2e56e5,
-    #862ee5
-  ); /* Adjust the gradient colors */
   border-image-slice: 1; /* Use 1 to slice the entire border */
 }
 .buttons:hover {
@@ -41,7 +33,8 @@
 .projects {
   display: flex;
   flex-direction: column; /* Default flex direction for small screens */
-
+  align-items: center;
+  justify-content: center;
   @media (min-width: 768px) {
     flex-direction: row; /* Change flex direction to row for screens larger than 768px */
   }

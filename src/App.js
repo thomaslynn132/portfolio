@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense } from "react";
 import "./App.css";
 import Loading from "./Pages/Loading/Loading";
 import RouterConfig from "./Components/RouterConfig";
@@ -9,39 +9,46 @@ import { BiHome } from "react-icons/bi";
 import { GrContact } from "react-icons/gr";
 import { GoProject } from "react-icons/go";
 import { HiInformationCircle } from "react-icons/hi";
+
 function App() {
   const navLinkStyles = ({ isActive }) => {
     return {
-      backgroundColor: isActive ? "skyblue" : "none",
+      backgroundColor: isActive ? "skyblue" : "transparent",
     };
   };
+
   return (
     <>
       <div className="App">
-        <div className="rdrs ">
-          <div className="rdrs ">
+        <div className="rdrs">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}>
             <NavLink style={navLinkStyles} to="/">
               <div className="redirects fadedIn">
                 <BiHome size={20} />
-              </div>{" "}
+                <p className="redirectTitle">Home</p>
+              </div>
             </NavLink>
-
             <NavLink to="/about" style={navLinkStyles}>
               <div className="redirects fadedIn">
                 <HiInformationCircle size={20} />
-              </div>{" "}
+                <p className="redirectTitle">About</p>
+              </div>
             </NavLink>
-
             <NavLink to="/contact" style={navLinkStyles}>
               <div className="redirects fadedIn">
                 <GrContact size={20} />
-              </div>{" "}
+                <p className="redirectTitle">Contact</p>
+              </div>
             </NavLink>
-
             <NavLink to="/projects" style={navLinkStyles}>
               <div className="redirects fadedIn">
                 <GoProject size={20} />
-              </div>{" "}
+                <p className="redirectTitle">Projects</p>
+              </div>
             </NavLink>
           </div>
           <DayOrNightMode />
@@ -49,8 +56,8 @@ function App() {
         <Suspense fallback={<Loading />}>
           <RouterConfig />
           <AnimatedCursor
-            innerSize={40}
-            outerSize={50}
+            innerSize={20}
+            outerSize={30}
             outerAlpha={0.2}
             innerScale={0.7}
             outerScale={3}
