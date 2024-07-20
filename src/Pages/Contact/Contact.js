@@ -2,6 +2,8 @@ import { CiFacebook, CiMail } from "react-icons/ci";
 import { motion, useScroll } from "framer-motion";
 import { FaInstagram, FaGithub, FaTelegram, FaLinkedin } from "react-icons/fa";
 import { useRef } from "react";
+import NavBar from "../../Components/NavBar";
+import SendMessage from "../../Components/SendMessage";
 
 function Contact() {
   const myEmail = "thantlinnaing0000@gmail.com";
@@ -43,6 +45,7 @@ function Contact() {
   return (
     <>
       <div>
+        <NavBar />
         <h2>Contact Me Via</h2>
         <motion.div
           initial={{ opacity: 0 }}
@@ -58,6 +61,15 @@ function Contact() {
               </div>
             </a>
           ))}
+        </motion.div>
+        <h3>Or</h3>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ root: scrollRef }}
+          transition={1}
+          style={{ scaleX: scrollYProgress }}>
+          <SendMessage />
         </motion.div>
       </div>
     </>

@@ -12,6 +12,7 @@ import {
   ShalKyi,
 } from "../../Assets/imageExport";
 import "./projects.css";
+import NavBar from "../../Components/NavBar";
 export default function Projects() {
   const sectionVariants = {
     hidden: { opacity: 0 },
@@ -158,6 +159,7 @@ export default function Projects() {
 
   return (
     <>
+      <NavBar />
       <motion.section
         className="projects-section portfolio-container"
         style={{ margin: "15px", padding: "15px" }}
@@ -191,10 +193,16 @@ export default function Projects() {
                     key={index}
                     onClick={() => chooseProject(index)}
                     style={{ textAlign: "start" }}
-                    className="projectNames"
-                    whileHover={{ scale: 1.1, color: "#007BFF" }}
+                    className="projectNames buttons"
+                    whileHover={{ scale: 1.05, color: "#007BFF" }}
                     whileTap={{ scale: 0.9 }}>
-                    {project.name}
+                    <button
+                      style={{
+                        backgroundColor: "transparent",
+                        border: "none",
+                      }}>
+                      {project.name}
+                    </button>
                   </motion.li>
                 ))}
               </motion.ul>

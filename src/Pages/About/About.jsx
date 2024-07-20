@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SkillImgs from "../skillImages/skillImgs";
 import { FaFileDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
+import NavBar from "../../Components/NavBar";
 const About = () => {
   const [showLess, setShowMore] = useState(
     "Hello there! I'm Thant Lynn Naing, a passionate 23-year-old frontend developer on an exhilarating journey since January 2023. Specializing in crafting engaging and responsive user interfaces..."
@@ -21,6 +22,7 @@ const About = () => {
   };
   return (
     <>
+      <NavBar />
       <div className="portfolio-container">
         <div className="aboutContainer about fadedIn">
           <section className="about-section">

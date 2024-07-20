@@ -1,4 +1,3 @@
-/* Header.css */
 * {
   color: rgb(0, 0, 0);
   justify-content: center;
@@ -9,13 +8,16 @@
 .App-header {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   height: 100vh; /* Make the header take the full height of the viewport */
   background-size: cover;
   background-position: center;
   text-align: center;
   color: white;
+  background-image: url(../../Assets/logo.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .myName {
   font-size: 30px;

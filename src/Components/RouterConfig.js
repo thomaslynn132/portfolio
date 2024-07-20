@@ -6,6 +6,7 @@ import About from "../Pages/About/About";
 import Projects from "../Pages/projects/Projects";
 import Error from "../Pages/Error/ErrorPage";
 import Contact from "../Pages/Contact/Contact";
+import Messages from "../Pages/Messages/Messages";
 
 const RouterConfig = () => {
   return (
@@ -16,6 +17,7 @@ const RouterConfig = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<Error />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="/receivedMessages" element={<Messages />} />
       </Routes>
     </div>
   );

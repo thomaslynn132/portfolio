@@ -41,8 +41,12 @@ export default function SkillImgs() {
 
           <div className="ImgHolder" style={{ height: "auto" }}>
             {skillImgs.map((skillImg, Index) => (
-              <div className="skillImgs" key={Index} style={{ width: "30vw" }}>
-                {skillImg.src} <br /> {skillImg.name}
+              <div
+                className="skillImgs redirects"
+                key={Index}
+                style={{ width: "30vw", border: "none", background: "none" }}>
+                {skillImg.src}
+                <div className="redirectTitle"> {skillImg.name}</div>
               </div>
             ))}
           </div>

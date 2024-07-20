@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaFileDownload } from "react-icons/fa";
 import "./Header.css";
 import ContactImgs from "../About/Contact";
+import NavBar from "../../Components/NavBar";
 const Header = () => {
   const words = [
     "Thomas Lynn",
@@ -24,11 +25,8 @@ const Header = () => {
 
   return (
     <>
-      <div
-        className="App-header"
-        style={{
-          alignItems: "center",
-        }}>
+      <div className="App-header">
+        <NavBar />
         <div
           style={{
             width: "100vw",
