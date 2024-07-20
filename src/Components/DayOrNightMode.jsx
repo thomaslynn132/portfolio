@@ -18,7 +18,10 @@ const DayOrNightMode = () => {
 
   return (
     <>
-      <div className="dayOrNightImg" onClick={toggleNightMode}>
+      <div
+        className="dayOrNightImg"
+        onClick={toggleNightMode}
+        style={{ marginRight: "15px" }}>
         {nightMode ? (
           <BsCloudSunFill
             size={50}

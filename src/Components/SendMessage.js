@@ -28,7 +28,7 @@ function SendMessage() {
 
   return (
     <>
-      <h2>Contact Me Via</h2>
+      <h2>From Here</h2>
       <form onSubmit={handleSubmit} className="messageForm">
         <label>Contact Info:</label>
         <br />

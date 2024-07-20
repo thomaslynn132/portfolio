@@ -5,7 +5,9 @@ import {
   FaReact,
   FaGithub,
 } from "react-icons/fa";
+import { FiFramer } from "react-icons/fi";
 import { IoLogoJavascript } from "react-icons/io";
+import { IoLogoFirebase } from "react-icons/io5";
 export default function SkillImgs() {
   const skillImgs = [
     {
@@ -17,7 +19,7 @@ export default function SkillImgs() {
       src: <FaCss3Alt size={50} />,
     },
     {
-      name: "JavaScript",
+      name: "JavaScript(ES6)",
       src: <IoLogoJavascript size={50} />,
     },
     {
@@ -32,6 +34,8 @@ export default function SkillImgs() {
       name: "GitHub",
       src: <FaGithub size={50} />,
     },
+    { name: "Framer Motion", src: <FiFramer size={50} /> },
+    { name: "Firebase", src: <IoLogoFirebase size={50} /> },
   ];
   return (
     <>
@@ -44,7 +48,11 @@ export default function SkillImgs() {
               <div
                 className="skillImgs redirects"
                 key={Index}
-                style={{ width: "30vw", border: "none", background: "none" }}>
+                style={{
+                  minWidth: "110px",
+                  border: "none",
+                  background: "none",
+                }}>
                 {skillImg.src}
                 <div className="redirectTitle"> {skillImg.name}</div>
               </div>

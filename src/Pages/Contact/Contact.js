@@ -62,7 +62,7 @@ function Contact() {
             </a>
           ))}
         </motion.div>
-        <h3>Or</h3>
+        <h1>Or</h1>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
