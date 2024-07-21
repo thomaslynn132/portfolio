@@ -21,21 +21,19 @@ const DayOrNightMode = () => {
       <div
         className="dayOrNightImg"
         onClick={toggleNightMode}
-        style={{ marginRight: "15px" }}>
+        style={{ position: "fixed", top: "10px" }}>
         {nightMode ? (
           <BsCloudSunFill
             size={50}
             style={{
-              marginRight: "15px",
-              marginTop: "15px",
+              marginLeft: "15px",
             }}
           />
         ) : (
           <GiNightSky
             size={50}
             style={{
-              marginRight: "15px",
-              marginTop: "15px",
+              marginLeft: "15px",
             }}
           />
         )}

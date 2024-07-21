@@ -6,7 +6,7 @@ import { GrContact } from "react-icons/gr";
 import { GoProject } from "react-icons/go";
 import { HiInformationCircle } from "react-icons/hi";
 import { FiMenu } from "react-icons/fi";
-
+import { motion } from "framer-motion";
 const navLinks = [
   {
     to: "/",
@@ -65,10 +65,22 @@ function NavBar() {
         style={navLinkStyles}
         className="redirects"
         onClick={onClick}>
-        <div className="fadedIn">
+        <motion.div
+          className="fadedIn"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          whileHover={{ scale: 1.05 }}>
           {icon}
-          <p className="redirectTitle">{label}</p>
-        </div>
+          <motion.p
+            className="redirectTitle"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            whileHover={{ color: "#f39c12" }}>
+            {label}
+          </motion.p>
+        </motion.div>
       </NavLink>
     ));
 
@@ -91,12 +103,15 @@ function NavBar() {
   return (
     <>
       <div className="rdrs" style={{ width: "100vw" }}>
+        <div>
+          <DayOrNightMode />
+        </div>
         {isDesktop ? (
           <div style={{ display: "flex", flexDirection: "row" }}>
             {renderNavLinks(null)}
           </div>
         ) : isMobileMenuOpen ? (
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div className="mobileMenu">
             {renderMobileNavLinks(toggleMobileMenu)}
           </div>
         ) : (
@@ -107,13 +122,11 @@ function NavBar() {
                 color: "black",
                 border: "3px solid",
                 borderRadius: "20%",
+                marginRight: "30px",
               }}
             />
           </div>
         )}
-        <div>
-          <DayOrNightMode />
-        </div>
       </div>
     </>
   );

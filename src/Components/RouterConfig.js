@@ -1,25 +1,27 @@
-// RouterConfig.js
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Header from "../Pages/Header/Header";
-import About from "../Pages/About/About";
-import Projects from "../Pages/projects/Projects";
-import Error from "../Pages/Error/ErrorPage";
-import Contact from "../Pages/Contact/Contact";
-import Messages from "../Pages/Messages/Messages";
+import Loading from "../Pages/Loading/Loading";
+
+// Lazy-load components
+const Header = lazy(() => import("../Pages/Header/Header"));
+const About = lazy(() => import("../Pages/About/About"));
+const Projects = lazy(() => import("../Pages/projects/Projects"));
+const Error = lazy(() => import("../Pages/Error/ErrorPage"));
+const Contact = lazy(() => import("../Pages/Contact/Contact"));
+const Messages = lazy(() => import("../Pages/Messages/Messages"));
 
 const RouterConfig = () => {
   return (
-    <div>
+    <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/" element={<Header />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<Error />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/receivedMessages" element={<Messages />} />
       </Routes>
-    </div>
+    </Suspense>
   );
 };
 

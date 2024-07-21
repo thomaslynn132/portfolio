@@ -9,10 +9,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh; /* Make the header take the full height of the viewport */
   background-size: cover;
   background-position: center;
   text-align: center;
+  min-height: 100vh;
   color: white;
   position: relative; /* Needed to position the pseudo-element */
 }

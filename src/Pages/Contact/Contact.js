@@ -52,7 +52,7 @@ function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ root: scrollRef }}
           transition={1}
-          style={{ scaleX: scrollYProgress }}>
+          style={{ scaleY: scrollYProgress }}>
           {ContactImgs.map((contactImg, index) => (
             <a href={contactImg.link} key={index} rel="noopener noreferrer">
               <div className="col contact">
@@ -68,7 +68,7 @@ function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ root: scrollRef }}
           transition={1}
-          style={{ scaleX: scrollYProgress }}>
+          style={{ scaleY: scrollYProgress }}>
           <SendMessage />
         </motion.div>
       </div>
