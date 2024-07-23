@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { FaFileDownload } from "react-icons/fa";
+import { motion } from "framer-motion";
 import "./Header.css";
 import ContactImgs from "../About/Contact";
 import NavBar from "../../Components/NavBar";
+
 const Header = () => {
   const words = [
     "Thomas Lynn",
@@ -12,6 +14,7 @@ const Header = () => {
   ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [fade, setFade] = useState("myName fade-in");
+
   useEffect(() => {
     const wordInterval = setInterval(() => {
       setFade("myName fade-out");
@@ -19,7 +22,7 @@ const Header = () => {
         setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
         setFade("myName fade-in");
       }, 500);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(wordInterval);
   }, [words.length, setCurrentWordIndex, setFade]);
 
@@ -35,14 +38,31 @@ const Header = () => {
             flexDirection: "row",
           }}>
           <div>
-            <p style={{ fontSize: "30px" }} className="fadedIn">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 10 }}
+              transition={{ duration: 1.5 }}
+              style={{ fontSize: "30px" }}
+              className="fadedIn">
               I am
-            </p>
-            <h1 className={fade} style={{ fontSize: "40px" }}>
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0.5, x: 300 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 5, repeat: Infinity, reverse: true }}
+              className={fade}
+              style={{ fontSize: "40px" }}>
               {words[currentWordIndex]}
-            </h1>
-            <a href="https://drive.google.com/file/d/1cyHSKsL7t06IPm-Y0Dq11IKlRBSLGQy5/view?usp=sharing">
-              <p
+            </motion.h1>
+            <motion.a
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              href="https://drive.google.com/file/d/1cyHSKsL7t06IPm-Y0Dq11IKlRBSLGQy5/view?usp=sharing">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 style={{
                   color: "blue",
                   WebkitTextStroke: "1px black 0.3",
@@ -51,8 +71,8 @@ const Header = () => {
                 }}>
                 <FaFileDownload size={25} className="fadedIn" />
                 Download My CV
-              </p>
-            </a>
+              </motion.p>
+            </motion.a>
           </div>
         </div>
         <ContactImgs />

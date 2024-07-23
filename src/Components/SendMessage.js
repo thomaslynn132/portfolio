@@ -64,7 +64,7 @@ function SendMessage() {
           type="submit"
           value="Send"
           className="buttons"
-          style={{ width: "100px" }}
+          style={{ width: "100px", backgroundColor: "transparent" }}
         />
       </form>
     </>

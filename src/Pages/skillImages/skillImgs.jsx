@@ -8,6 +8,8 @@ import {
 import { FiFramer } from "react-icons/fi";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoFirebase } from "react-icons/io5";
+import { motion } from "framer-motion";
+
 export default function SkillImgs() {
   const skillImgs = [
     {
@@ -37,15 +39,33 @@ export default function SkillImgs() {
     { name: "Framer Motion", src: <FiFramer size={50} /> },
     { name: "Firebase", src: <IoLogoFirebase size={50} /> },
   ];
+
   return (
     <>
       <section className="skills-section skills">
-        <div className="portfolio-container">
-          <h1>Skills</h1>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="portfolio-container">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}>
+            Skills
+          </motion.h1>
 
-          <div className="ImgHolder" style={{ height: "auto" }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="ImgHolder"
+            style={{ height: "auto" }}>
             {skillImgs.map((skillImg, Index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
                 className="skillImgs redirects"
                 key={Index}
                 style={{
@@ -53,12 +73,22 @@ export default function SkillImgs() {
                   border: "none",
                   background: "none",
                 }}>
-                {skillImg.src}
-                <div className="redirectTitle"> {skillImg.name}</div>
-              </div>
+                <motion.button
+                  whileTap={{ scale: 0.85 }}
+                  style={{ backgroundColor: "transparent", border: "none" }}>
+                  {skillImg.src}{" "}
+                </motion.button>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="redirectTitle">
+                  {skillImg.name}
+                </motion.div>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     </>
   );

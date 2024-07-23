@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   englishGrammar,
@@ -14,66 +14,103 @@ import {
 import "./projects.css";
 import NavBar from "../../Components/NavBar";
 export default function Projects() {
+  const [activeProjectIndex, setActiveProjectIndex] = useState(null);
+
   const sectionVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
+    transition: 1,
   };
+
+  const buttonVariants = {
+    initial: {
+      opacity: 0,
+      y: 10,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+    hover: {
+      scale: 1.1,
+      transition: {
+        duration: 0.2,
+      },
+    },
+    tap: {
+      scale: 0.7,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
   const projects = [
     {
       name: "The WPPOOL Index",
       img: Books,
       gitHub: "https://github.com/thomaslynn132/wppoolindex",
       liveDemo: "https://wppoolindex.vercel.app/",
-      usedTech: "HTML5, CSS3, Javascript, ReactJs, Chart Js",
+      usedTech:
+        "HTML5 for structure, CSS3 for styling, Javascript for interactivity, ReactJs for user interface, Chart Js for data visualization",
     },
     {
       name: "Pi Vaping",
       img: PiVaping,
       gitHub: "https://github.com/thomaslynn132/pi_vaping_store",
       liveDemo: "https://pi-vaping-store.vercel.app/",
-      usedTech: "HTML, CSS, Javascript, ReactJs, Boostrap ",
+      usedTech:
+        "HTML5 for structure, CSS for styling, Javascript for interactivity, ReactJs for user interface, Bootstrap for layout and customization",
     },
     {
       name: "EnglishGrammar",
       img: englishGrammar,
       gitHub: "https://github.com/thomaslynn132/English-Grammar",
       liveDemo: "https://learn-english-with-thoma-3bd6e.web.app",
-      usedTech: "HTML, CSS3, Javascript, ReactJs",
+      usedTech:
+        "HTML5 for structure, CSS3 for styling, Javascript for interactivity, ReactJs for user interface",
     },
     {
       name: "A Linn Yaung Myanmar co.ltd",
       img: alyMyanmar,
       gitHub: null,
       liveDemo: "https://aly-myanmar.vercel.app/",
-      usedTech: "HTML, CSS3, Javascript, ReactJs",
+      usedTech:
+        "HTML5 for structure, CSS3 for styling, Javascript for interactivity, ReactJs for user interface",
     },
     {
       name: "To Do List",
       img: ToDoList,
       gitHub: "https://github.com/thomaslynn132/todolistapp",
       liveDemo: "https://delightful-donut-b6d2ea.netlify.app/",
-      usedTech: "HTML, CSS3, Javascript, ReactJs",
+      usedTech:
+        "HTML5 for structure, CSS3 for styling, Javascript for interactivity, ReactJs for user interface",
     },
     {
       name: "My Portfolio",
       img: Portfolio,
       gitHub: "https://github.com/thomaslynn132/portfolio",
       liveDemo: null,
-      usedTech: "HTML, CSS3, Javascript, ReactJs, Framer Motion",
+      usedTech:
+        "HTML5 for structure, CSS3 for styling, Javascript for interactivity, ReactJs for user interface, Framer Motion for animations",
     },
     {
       name: "Homepage design for contest",
       img: homePage,
       gitHub: "https://github.com/thomaslynn132/homepage-design",
       liveDemo: null,
-      usedTech: "HTML5, CSS3",
+      usedTech: "HTML5 for structure, CSS3 for styling",
     },
     {
       name: "Shal Kyi Movie App (Still Developing)",
       img: ShalKyi,
       gitHub: null,
       liveDemo: "https://movies-app-wine-seven.vercel.app/",
-      usedTech: "HTML5, CSS3, Firebase, Boostrap, React Router, Video.js, GSAP",
+      usedTech:
+        "HTML5 for structure, CSS3 for styling,React for user interface, Bootstrap for layout and customization, NextCloud for movie files cloud storage, Video Js for video player, GSAP for animations",
     },
   ];
 
@@ -81,41 +118,47 @@ export default function Projects() {
 
   const chooseProject = (index) => {
     setSelectedProject(projects[index]);
+
+    setActiveProjectIndex(index);
   };
 
   const ProjectDescription = () => {
-    // Assuming you have a suitable motion variant defined
+    const [techs, setTechs] = useState([]);
+    const [index, setIndex] = useState(0);
 
-    if (!selectedProject) {
-      return (
-        <>
-          <motion.div
-            className="fadedIn"
-            style={{ padding: "10px" }}
-            variants={sectionVariants}
-            initial="hidden"
-            animate="visible">
-            These projects showcase my latest work as a React.js developer in my
-            professional career background.
-          </motion.div>
-        </>
-      );
-    }
+    useEffect(() => {
+      if (selectedProject) {
+        const techArray = selectedProject.usedTech.split(",");
+        setTechs(techArray);
+      }
+    }, []);
+
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        setIndex((prevIndex) => prevIndex + 1);
+      }, 700);
+
+      return () => clearInterval(intervalId);
+    }, []);
 
     return (
       <>
         <motion.section
-          className="projects-section portfolio-container"
+          className="portfolio-container"
           variants={sectionVariants}
           initial="hidden"
           animate="visible">
           <h1>Used Technologies</h1>
-          <motion.p className="fadedIn">{selectedProject.usedTech}</motion.p>
+          {techs.slice(0, index).map((tech, i) => (
+            <span key={i}>
+              {tech}
+              <br />
+            </span>
+          ))}
         </motion.section>
       </>
     );
   };
-
   const ProjectDetails = () => {
     if (!selectedProject) {
       return (
@@ -147,10 +190,26 @@ export default function Projects() {
         <br />
         <div>
           <a href={selectedProject.gitHub}>
-            <button className="buttons fadedIn">GitHub</button>
+            <motion.button
+              className="buttons fadedIn"
+              variants={buttonVariants}
+              initial="initial"
+              animate="animate"
+              whileHover="hover"
+              whileTap="tap">
+              GitHub
+            </motion.button>
           </a>
           <a href={selectedProject.liveDemo}>
-            <button className="buttons fadedIn">Live Demo</button>
+            <motion.button
+              className="buttons fadedIn"
+              variants={buttonVariants}
+              initial="initial"
+              animate="animate"
+              whileHover="hover"
+              whileTap="tap">
+              Live Demo
+            </motion.button>
           </a>
         </div>
       </div>
@@ -195,7 +254,12 @@ export default function Projects() {
                     style={{ textAlign: "start" }}
                     className="projectNames buttons"
                     whileHover={{ scale: 1.05, color: "#007BFF" }}
-                    whileTap={{ scale: 0.9 }}>
+                    whileTap={{ scale: 0.9 }}
+                    animate={
+                      activeProjectIndex === index
+                        ? { backgroundColor: "#007BFF", color: "#FFFFFF" }
+                        : {}
+                    }>
                     <button
                       style={{
                         backgroundColor: "transparent",
@@ -208,9 +272,9 @@ export default function Projects() {
               </motion.ul>
             </motion.div>
           </div>
-          <ProjectDescription />
         </div>
-      </motion.section>
+        <ProjectDescription />
+      </motion.section>{" "}
     </>
   );
 }

@@ -21,7 +21,7 @@ const DayOrNightMode = () => {
       <div
         className="dayOrNightImg"
         onClick={toggleNightMode}
-        style={{ position: "fixed", top: "10px" }}>
+        style={{ top: "10px" }}>
         {nightMode ? (
           <BsCloudSunFill
             size={50}

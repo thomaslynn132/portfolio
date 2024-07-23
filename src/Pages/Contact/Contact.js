@@ -44,7 +44,7 @@ function Contact() {
   ];
   return (
     <>
-      <div>
+      <div style={{ paddingBottom: "50px" }}>
         <NavBar />
         <h2>Contact Me Via</h2>
         <motion.div
