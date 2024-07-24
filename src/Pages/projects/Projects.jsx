@@ -68,8 +68,8 @@ export default function Projects() {
     {
       name: "EnglishGrammar",
       img: englishGrammar,
-      gitHub: "https://github.com/thomaslynn132/English-Grammar",
-      liveDemo: "https://learn-english-with-thoma-3bd6e.web.app",
+      gitHub: "https://github.com/thomaslynn132/EnglishGrammar",
+      liveDemo: "https://learn-english-with-thomas132.web.app/",
       usedTech:
         "HTML5 for structure, CSS3 for styling, Javascript for interactivity, ReactJs for user interface",
     },
