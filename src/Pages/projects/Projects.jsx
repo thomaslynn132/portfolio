@@ -10,6 +10,7 @@ import {
   myPhoto,
   Books,
   ShalKyi,
+  tapNumberGame,
 } from "../../Assets/imageExport";
 import "./projects.css";
 import NavBar from "../../Components/NavBar";
@@ -49,6 +50,14 @@ export default function Projects() {
   };
 
   const projects = [
+    {
+      name: "Tap Number Game",
+      img: tapNumberGame,
+      gitHub: "https://github.com/thomaslynn132/tap-number-game",
+      liveDemo: "https://tap-number-game.vercel.app/",
+      usedTech:
+        "HTML5 for structure, CSS3 for styling, Javascript for interactivity, ReactJs for user interface",
+    },
     {
       name: "The WPPOOL Index",
       img: Books,

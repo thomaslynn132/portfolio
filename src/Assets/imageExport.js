@@ -9,9 +9,11 @@ import Portfolio from "./Portfolio.png";
 import Logo from "./logo.png";
 import PiVaping from "./PiVaping.png";
 import Books from "./Books.png";
-import ShalKyi from "./ShalKyi.png";
+import ShalKyi from "./ShalKyi.png";\
+import tapNumberGame from "./tapNumberGame.png"
 export {
   ShalKyi,
+  tapNumberGame,
   Books,
   PiVaping,
   Logo,
