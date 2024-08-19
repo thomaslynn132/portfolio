@@ -41,7 +41,7 @@ const About = () => {
                   </motion.span>
                 ))}
               </motion.p>
-              <a href="https://drive.google.com/file/d/1cyHSKsL7t06IPm-Y0Dq11IKlRBSLGQy5/view?usp=sharing">
+              <a href="https://drive.google.com/file/d/1DO6Xe-MGVhX4VNAkZt_vperH1Ifv8Se2/view?usp=drive_link">
                 <p
                   style={{
                     color: "red",
